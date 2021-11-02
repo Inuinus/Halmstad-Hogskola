@@ -1,1 +1,1 @@
-# Halmstad-H-gskola
+# Halmstad-Högskola
