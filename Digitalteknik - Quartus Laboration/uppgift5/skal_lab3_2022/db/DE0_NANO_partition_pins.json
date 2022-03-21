@@ -1,0 +1,81 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Ladda",
+					"strict" : false
+				},
+				{
+					"name" : "Rakna",
+					"strict" : false
+				},
+				{
+					"name" : "A_out",
+					"strict" : false
+				},
+				{
+					"name" : "clk_163",
+					"strict" : false
+				},
+				{
+					"name" : "jk1",
+					"strict" : false
+				},
+				{
+					"name" : "jk0",
+					"strict" : false
+				},
+				{
+					"name" : "QA",
+					"strict" : false
+				},
+				{
+					"name" : "QB",
+					"strict" : false
+				},
+				{
+					"name" : "QC",
+					"strict" : false
+				},
+				{
+					"name" : "QD",
+					"strict" : false
+				},
+				{
+					"name" : "klar1",
+					"strict" : false
+				},
+				{
+					"name" : "Start",
+					"strict" : false
+				},
+				{
+					"name" : "CLK50M",
+					"strict" : false
+				},
+				{
+					"name" : "CLEAR",
+					"strict" : false
+				},
+				{
+					"name" : "A",
+					"strict" : false
+				},
+				{
+					"name" : "B",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				},
+				{
+					"name" : "D",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

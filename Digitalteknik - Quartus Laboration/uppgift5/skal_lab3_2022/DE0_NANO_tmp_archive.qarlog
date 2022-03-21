@@ -1,0 +1,29 @@
+Quartus Prime Archive log --	H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/DE0_NANO_tmp_archive.qarlog
+
+Archive:	H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/DE0_NANO_tmp_archive.qar
+Date:		Wed Feb 23 10:57:05 2022
+Quartus Prime		16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/tommy/Desktop/New folder/skal_lab3_2022.bdf
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/Block6.bdf
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/DE0_NANO.qpf
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/DE0_NANO.qsf
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/DE0_NANO.sdc
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/DE0_NANO.v
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/DE0_NANO_assignment_defaults.qdf
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/Waveform3.vwf
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/Waveform4.vwf
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/Waveform5.vwf
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/clock_divider.vhd
+H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/j_k_flip_flop.vhd
+	======= Total: 12 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Wed Feb 23 10:57:09 2022
+Source archive file:	H:/utbildningar/digitalteknik/D_E_MEK/quartus/lab3_2021_12_01/DE0_NANO_tmp_archive.qar
+Archive was extracted into	C:/Users/tommy/Desktop/New folder/
+		 - successfully.

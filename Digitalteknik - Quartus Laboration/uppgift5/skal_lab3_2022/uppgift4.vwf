@@ -1,0 +1,650 @@
+/*<simulation_settings>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off DE0_NANO -c DE0_NANO --vector_source="C:/Users/linus/Desktop/skal_lab3_2022/uppgift4.vwf" --testbench_file="C:/Users/linus/Desktop/skal_lab3_2022/simulation/qsim/uppgift4.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off DE0_NANO -c DE0_NANO --vector_source="C:/Users/linus/Desktop/skal_lab3_2022/uppgift4.vwf" --testbench_file="C:/Users/linus/Desktop/skal_lab3_2022/simulation/qsim/uppgift4.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/linus/Desktop/skal_lab3_2022/simulation/qsim/" DE0_NANO -c DE0_NANO</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/linus/Desktop/skal_lab3_2022/simulation/qsim/" DE0_NANO -c DE0_NANO</tnetlist_cmd>
+<modelsim_script>onerror {exit -code 1}
+vlib work
+vcom -work work DE0_NANO.vho
+vcom -work work uppgift4.vwf.vht
+vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Block6_vhd_vec_tst
+vcd file -direction DE0_NANO.msim.vcd
+vcd add -internal Block6_vhd_vec_tst/*
+vcd add -internal Block6_vhd_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f
+</modelsim_script>
+<modelsim_script_timing>onerror {exit -code 1}
+vlib work
+vcom -work work DE0_NANO.vho
+vcom -work work uppgift4.vwf.vht
+vsim -novopt -c -t 1ps -sdfmax Block6_vhd_vec_tst/i1=DE0_NANO_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Block6_vhd_vec_tst
+vcd file -direction DE0_NANO.msim.vcd
+vcd add -internal Block6_vhd_vec_tst/*
+vcd add -internal Block6_vhd_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f
+</modelsim_script_timing>
+<hdl_lang>vhdl</hdl_lang>
+</simulation_settings>*/
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 100000.0;
+	SIMULATION_TIME = 0.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 1000.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("A")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("A_out")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("B")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("C")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("CLEAR")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("CLK50M")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("clk_163")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("D")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("jk0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("jk1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Klar")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("klar1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Ladda")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("QA")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("QB")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("QC")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("QD")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Rakna")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Start")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("SW_CLK")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("A")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("A_out")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("B")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("C")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("CLEAR")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("CLK50M")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 5000;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+	}
+}
+
+TRANSITION_LIST("clk_163")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("D")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("jk0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("jk1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("Klar")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("klar1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("Ladda")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("QA")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("QB")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("QC")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("QD")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("Rakna")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("Start")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 16000.0;
+		LEVEL 1 FOR 9000.0;
+		LEVEL 0 FOR 75000.0;
+	}
+}
+
+TRANSITION_LIST("SW_CLK")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 100000.0;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "A";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "A_out";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "B";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "C";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CLEAR";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CLK50M";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clk_163";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "D";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "jk0";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "jk1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Klar";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "klar1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Ladda";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "QA";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "QB";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "QC";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "QD";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Rakna";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Start";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "SW_CLK";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 19;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 0;
+	MASTER = TRUE;
+}
+;

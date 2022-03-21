@@ -1,0 +1,107 @@
+$comment
+	File created using the following command:
+		vcd file first_test.msim.vcd -direction
+$end
+$date
+	Mon Feb 28 14:54:26 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module first_test_vhd_vec_tst $end
+$var wire 1 ! A $end
+$var wire 1 " B $end
+$var wire 1 # C $end
+
+$scope module i1 $end
+$var wire 1 $ gnd $end
+$var wire 1 % vcc $end
+$var wire 1 & unknown $end
+$var wire 1 ' devoe $end
+$var wire 1 ( devclrn $end
+$var wire 1 ) devpor $end
+$var wire 1 * ww_devoe $end
+$var wire 1 + ww_devclrn $end
+$var wire 1 , ww_devpor $end
+$var wire 1 - ww_C $end
+$var wire 1 . ww_A $end
+$var wire 1 / ww_B $end
+$var wire 1 0 \C~output_o\ $end
+$var wire 1 1 \A~input_o\ $end
+$var wire 1 2 \B~input_o\ $end
+$var wire 1 3 \inst~combout\ $end
+$var wire 1 4 \ALT_INV_inst~combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+1#
+0$
+1%
+x&
+1'
+1(
+1)
+1*
+1+
+1,
+1-
+0.
+0/
+10
+01
+02
+03
+14
+$end
+#3000000
+1!
+1.
+11
+13
+04
+00
+0-
+0#
+#6000000
+0!
+0.
+01
+03
+14
+10
+1-
+1#
+#9000000
+1"
+1/
+12
+13
+04
+00
+0-
+0#
+#11000000
+1!
+1.
+11
+03
+14
+10
+1-
+1#
+#14000000
+0!
+0"
+0.
+0/
+02
+01
+#100000000

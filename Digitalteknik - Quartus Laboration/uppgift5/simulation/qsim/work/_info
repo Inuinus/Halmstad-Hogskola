@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/linus/Desktop/digitalteknik quartos things/uppgift5/simulation/qsim
+Ehard_block
+Z1 w1646741404
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+R0
+Z8 8uppgift5.vho
+Z9 Fuppgift5.vho
+l0
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1646741405
+!i10b 1
+Z12 !s108 1646741405.000000
+Z13 !s90 -work|work|uppgift5.vho|
+Z14 !s107 uppgift5.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+V`^CmQg<48W[ez[JL_5@Yn2
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Euppgift5
+R1
+R3
+R7
+R2
+Z17 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+R4
+R5
+R6
+Z18 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+R8
+R9
+l0
+L79
+V:X2_>OeFVa8R[RScbR?hA3
+!s100 9Lh=De@8?3WFn6P1gA@bJ2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R3
+R7
+R2
+R17
+R4
+R5
+R6
+R18
+DEx4 work 8 uppgift5 0 22 :X2_>OeFVa8R[RScbR?hA3
+l170
+L107
+VEI[VRXDAciiW>M_eT^LNL0
+!s100 IYDkK[@4jI5@^LOY3bW3l2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Euppgift5_vhd_vec_tst
+R1
+R5
+R6
+R0
+Z19 8test4linus.vwf.vht
+Z20 Ftest4linus.vwf.vht
+l0
+L31
+V4GPHgF@8keMJ1VS:8Ncl80
+!s100 bQzeZ2nj3`mbiI9zFd<8k1
+R10
+32
+R11
+!i10b 1
+R12
+Z21 !s90 -work|work|test4linus.vwf.vht|
+Z22 !s107 test4linus.vwf.vht|
+!i113 1
+R15
+R16
+Auppgift5_arch
+R5
+R6
+Z23 DEx4 work 20 uppgift5_vhd_vec_tst 0 22 4GPHgF@8keMJ1VS:8Ncl80
+l60
+L33
+Z24 Vh>m9a_6XL_eBEoOzSO>613
+Z25 !s100 <nn_k3mUIPDX7m@dfMUDI3
+R10
+32
+R11
+!i10b 1
+R12
+R21
+R22
+!i113 1
+R15
+R16

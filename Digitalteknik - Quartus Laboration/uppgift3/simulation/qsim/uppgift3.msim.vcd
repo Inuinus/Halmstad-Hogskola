@@ -1,0 +1,308 @@
+$comment
+	File created using the following command:
+		vcd file uppgift3.msim.vcd -direction
+$end
+$date
+	Mon Mar 07 13:38:41 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module uppgift3_vhd_vec_tst $end
+$var wire 1 ! A $end
+$var wire 1 " clk3 $end
+$var wire 1 # K $end
+$var wire 1 $ L $end
+$var wire 1 % R $end
+$var wire 1 & X $end
+
+$scope module i1 $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var wire 1 * devoe $end
+$var wire 1 + devclrn $end
+$var wire 1 , devpor $end
+$var wire 1 - ww_devoe $end
+$var wire 1 . ww_devclrn $end
+$var wire 1 / ww_devpor $end
+$var wire 1 0 ww_A $end
+$var wire 1 1 ww_clk3 $end
+$var wire 1 2 ww_K $end
+$var wire 1 3 ww_X $end
+$var wire 1 4 ww_L $end
+$var wire 1 5 ww_R $end
+$var wire 1 6 \clk3~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 7 \clk3~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 8 \clk3~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 9 \clk3~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 : \A~output_o\ $end
+$var wire 1 ; \L~output_o\ $end
+$var wire 1 < \R~output_o\ $end
+$var wire 1 = \clk3~input_o\ $end
+$var wire 1 > \clk3~inputclkctrl_outclk\ $end
+$var wire 1 ? \K~input_o\ $end
+$var wire 1 @ \X~input_o\ $end
+$var wire 1 A \inst2|iq~0_combout\ $end
+$var wire 1 B \inst2|iq~q\ $end
+$var wire 1 C \inst|iq~2_combout\ $end
+$var wire 1 D \inst|iq~q\ $end
+$var wire 1 E \inst|iq~0_combout\ $end
+$var wire 1 F \inst|iq~1_combout\ $end
+$var wire 1 G \inst|ALT_INV_iq~1_combout\ $end
+$var wire 1 H \inst|ALT_INV_iq~0_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+0#
+1$
+0%
+0&
+0'
+1(
+x)
+1*
+1+
+1,
+1-
+1.
+1/
+10
+01
+02
+03
+14
+05
+1:
+1;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+1G
+1H
+16
+17
+18
+09
+$end
+#5000000
+1"
+11
+1=
+19
+1>
+#10000000
+0"
+01
+0=
+09
+0>
+#14000000
+1&
+13
+1@
+1A
+#15000000
+1"
+11
+1=
+19
+1>
+1B
+1F
+0G
+0;
+04
+0$
+#20000000
+0"
+0&
+01
+03
+0@
+0=
+09
+1C
+0>
+#25000000
+1"
+11
+1=
+19
+1>
+1D
+0A
+1E
+0F
+1G
+0H
+1<
+0:
+1;
+15
+00
+14
+1%
+0!
+1$
+#30000000
+0"
+01
+0=
+09
+0>
+#35000000
+1"
+11
+1=
+19
+1>
+0B
+1A
+0E
+1H
+0<
+1:
+05
+10
+0%
+1!
+#40000000
+0"
+01
+0=
+09
+0>
+#45000000
+1"
+11
+1=
+19
+1>
+1B
+0A
+1E
+0H
+1<
+0:
+15
+00
+1%
+0!
+#50000000
+0"
+01
+0=
+09
+0>
+#55000000
+1"
+11
+1=
+19
+1>
+0B
+1A
+0E
+1H
+0<
+1:
+05
+10
+0%
+1!
+#60000000
+0"
+01
+0=
+09
+0>
+#65000000
+1"
+11
+1=
+19
+1>
+1B
+0A
+1E
+0H
+1<
+0:
+15
+00
+1%
+0!
+#70000000
+0"
+01
+0=
+09
+0>
+#75000000
+1"
+11
+1=
+19
+1>
+0B
+1A
+0E
+1H
+0<
+1:
+05
+10
+0%
+1!
+#80000000
+0"
+01
+0=
+09
+0>
+#84000000
+1#
+12
+1?
+0A
+0C
+#85000000
+1"
+11
+1=
+19
+1>
+0D
+#90000000
+0"
+0#
+01
+02
+0?
+0=
+09
+0>
+#95000000
+1"
+11
+1=
+19
+1>
+#100000000

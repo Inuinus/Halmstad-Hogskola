@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Mar 07 13:36:46 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : uppgift3
+Top-level Entity Name : uppgift3
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 4 / 22,320 ( < 1 % )
+    Total combinational functions : 4 / 22,320 ( < 1 % )
+    Dedicated logic registers : 2 / 22,320 ( < 1 % )
+Total registers : 2
+Total pins : 6 / 154 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

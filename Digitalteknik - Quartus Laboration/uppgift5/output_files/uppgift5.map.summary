@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Mar 08 13:09:28 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : uppgift5
+Top-level Entity Name : uppgift5
+Family : Cyclone IV E
+Total logic elements : 11
+    Total combinational functions : 11
+    Dedicated logic registers : 9
+Total registers : 9
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

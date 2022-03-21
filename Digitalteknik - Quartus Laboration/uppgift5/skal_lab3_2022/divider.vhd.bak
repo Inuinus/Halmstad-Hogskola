@@ -1,0 +1,19 @@
+-- D-vippa
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+
+entity divider is
+	port(clock: in std_logic;
+		clk_out: out std_logic);
+end entity divider;
+
+architecture beteende of divider is
+begin
+	process(clock)
+	begin
+		if rising_edge(clock) then
+			d_out <= d_in;
+		end if;
+	end process;
+end architecture beteende;

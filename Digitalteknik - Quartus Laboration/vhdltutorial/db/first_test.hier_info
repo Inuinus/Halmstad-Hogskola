@@ -1,0 +1,18 @@
+|first_test
+Q <= j_k_flip_flop:inst.q
+clk => j_k_flip_flop:inst.clk
+j => j_k_flip_flop:inst.j
+k => j_k_flip_flop:inst.k
+
+
+|first_test|j_k_flip_flop:inst
+clk => iq.CLK
+j => p_flip_flop.IN0
+j => p_flip_flop.IN0
+j => p_flip_flop.IN0
+k => p_flip_flop.IN1
+k => p_flip_flop.IN1
+k => p_flip_flop.IN1
+q <= iq.DB_MAX_OUTPUT_PORT_TYPE
+
+

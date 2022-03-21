@@ -1,0 +1,124 @@
+|Block6
+Ladda <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+CLK50M => clock_divider:inst.clk_50MHz
+C => 74163:inst4.C
+B => 74163:inst4.B
+A => 74163:inst4.A
+D => 74163:inst4.D
+CLEAR => 74163:inst4.CLRN
+Start => inst22.IN0
+Start => inst22.IN1
+Start => inst32.IN0
+Rakna <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+A_out <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+clk_163 <= clock_divider:inst.clk_div
+jk1 <= j_k_flip_flop:inst3.q
+jk0 <= j_k_flip_flop:inst2.q
+QA <= 74163:inst4.QA
+QB <= 74163:inst4.QB
+QC <= 74163:inst4.QC
+QD <= 74163:inst4.QD
+klar1 <= 74163:inst4.RCO
+Klar => ~NO_FANOUT~
+SW_CLK => ~NO_FANOUT~
+
+
+|Block6|j_k_flip_flop:inst2
+clk => iq.CLK
+j => p_flip_flop.IN0
+j => p_flip_flop.IN0
+j => p_flip_flop.IN0
+k => p_flip_flop.IN1
+k => p_flip_flop.IN1
+k => p_flip_flop.IN1
+q <= iq.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block6|clock_divider:inst
+clk_50MHz => clk_divider[0].CLK
+clk_50MHz => clk_divider[1].CLK
+clk_50MHz => clk_divider[2].CLK
+clk_50MHz => clk_divider[3].CLK
+clk_50MHz => clk_divider[4].CLK
+clk_50MHz => clk_divider[5].CLK
+clk_50MHz => clk_divider[6].CLK
+clk_50MHz => clk_divider[7].CLK
+clk_50MHz => clk_divider[8].CLK
+clk_50MHz => clk_divider[9].CLK
+clk_50MHz => clk_divider[10].CLK
+clk_50MHz => clk_divider[11].CLK
+clk_50MHz => clk_divider[12].CLK
+clk_50MHz => clk_divider[13].CLK
+clk_50MHz => clk_divider[14].CLK
+clk_50MHz => clk_divider[15].CLK
+clk_50MHz => clk_divider[16].CLK
+clk_50MHz => clk_divider[17].CLK
+clk_50MHz => clk_divider[18].CLK
+clk_50MHz => clk_divider[19].CLK
+clk_50MHz => clk_divider[20].CLK
+clk_50MHz => clk_divider[21].CLK
+clk_50MHz => clk_divider[22].CLK
+clk_50MHz => clk_divider[23].CLK
+clk_50MHz => clk_divider[24].CLK
+clk_50MHz => clk_divider[25].CLK
+clk_div <= clk_divider[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block6|74163:inst4
+clk => f74163:sub.clk
+ldn => f74163:sub.ldn
+clrn => f74163:sub.clrn
+enp => f74163:sub.enp
+ent => f74163:sub.ent
+d => f74163:sub.d
+c => f74163:sub.c
+b => f74163:sub.b
+a => f74163:sub.a
+qd <= f74163:sub.qd
+qc <= f74163:sub.qc
+qb <= f74163:sub.qb
+qa <= f74163:sub.qa
+rco <= f74163:sub.rco
+
+
+|Block6|74163:inst4|f74163:sub
+RCO <= 129.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 134.CLK
+CLK => 122.CLK
+CLK => 111.CLK
+CLK => 34.CLK
+CLRN => 137.IN0
+CLRN => 126.IN0
+CLRN => 115.IN0
+CLRN => 68.IN0
+D => 136.IN0
+LDN => 144.IN0
+LDN => 132.IN0
+LDN => 121.IN0
+LDN => 110.IN0
+LDN => 71.IN0
+ENP => 130.IN0
+ENP => 119.IN0
+ENP => 108.IN0
+ENP => 105.IN0
+C => 124.IN0
+B => 113.IN0
+A => 70.IN0
+ENT => 140.DATAIN
+QD <= 134.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 122.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 111.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 34.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block6|j_k_flip_flop:inst3
+clk => iq.CLK
+j => p_flip_flop.IN0
+j => p_flip_flop.IN0
+j => p_flip_flop.IN0
+k => p_flip_flop.IN1
+k => p_flip_flop.IN1
+k => p_flip_flop.IN1
+q <= iq.DB_MAX_OUTPUT_PORT_TYPE
+
+
