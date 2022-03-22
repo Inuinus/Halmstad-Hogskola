@@ -33,6 +33,30 @@ public class MyArrayList<T>{
     MyArray[index] = t;
   }
 
+  public boolean contains(T t){
+    for(int i = 0; i < size; i++){
+      if(MyArray[i].equals(t)){
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public T get(int index){
+    if(index < 0 || index >= size){
+      throw new IndexOutOfBoundsException(index + " " + size());
+    }
+    return MyArray[index];
+  }
+
+  public int indexOf(T t){
+    for(int i = 0; i < MyArray.length(); i++){
+      if(MyArray[i] == t){
+        return i;
+      }
+    }
+    return -1;
+  }
 
 
 public static void main(String[] args) {
