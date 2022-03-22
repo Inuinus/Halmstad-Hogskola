@@ -33,7 +33,7 @@ public class MyArrayList<T>{
     MyArray[index] = t;
   }
 
-  public boolean contains(T t){
+  public boolean contains(T t){           //Returnerar true om t finns i listan. Annars returneras false.
     for(int i = 0; i < size; i++){
       if(MyArray[i].equals(t)){
         return true;
@@ -42,14 +42,15 @@ public class MyArrayList<T>{
     return false;
   }
 
-  public T get(int index){
+  public T get(int index){              //Returnerar värdet på plats index om det finns, annars returneras null.
     if(index < 0 || index >= size){
       throw new IndexOutOfBoundsException(index + " " + size());
     }
     return MyArray[index];
   }
 
-  public int indexOf(T t){
+  public int indexOf(T t){         //Returnerar antingen index för första förekomsten av t, eller returnerar -1.
+
     for(int i = 0; i < MyArray.length(); i++){
       if(MyArray[i] == t){
         return i;
@@ -58,6 +59,9 @@ public class MyArrayList<T>{
     return -1;
   }
 
+  public T remove(int index){
+
+}
 
 public static void main(String[] args) {
 
