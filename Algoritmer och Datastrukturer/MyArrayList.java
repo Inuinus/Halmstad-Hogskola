@@ -59,7 +59,7 @@ public class MyArrayList<T>{
     return -1;
   }
 
-  public T remove(int index){
+  public T remove(int index){       //Tar bort element på plats i.
 
 }
 
