@@ -1,3 +1,5 @@
+import java.security.Timestamp;
+
 public class MyArrayList<T>{
 
   private T[] MyArray;          //Lagrar elementen
@@ -9,27 +11,24 @@ public class MyArrayList<T>{
   }
 
   public boolean add(T t){      //t i slutet av listan(arrayn)
-    T[] newList = (T[]) new Object[MyArray.length*2];
-    for(int i = 0; i < newList.length; i++){
-      if(i == MyArray.length){
-        newList[i] = t;
+    if(size == MyArray.length){
+      Object[] temporary = new Object[MyArray.length];
+      for(int i = 0; i < MyArray.length; i++){
+        temporary[i] = MyArray[i];
       }
-      if(i < MyArray.length){
-        newList[i] = MyArray[i];
+      MyArray = (T[]) new Object[MyArray.length*2];
+      for(int i = 0; i < MyArray.length; i++){
+        MyArray[i] = (T) temporary[i];
       }
     }
-    for (int i = 0;i < newList.length; i++) {
-      System.out.println(newList[i]);
-    }
-    MyArray = newList;
+    MyArray[size] = t;
+    size++;
+    //System.out.println(MyArray[size]); //Kontroll för att se så det funkar.//
     return true;
   }
 
-public static void main(String[] args) {
+  public T get(int index){
+    return MyArray[index];
+  }
 
-  MyArrayList a1 = new MyArrayList();
-
-  //boolean add
-  a1.add("t");
-}
 }
