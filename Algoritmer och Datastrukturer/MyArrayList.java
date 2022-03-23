@@ -27,6 +27,18 @@ public class MyArrayList<T>{
     return true;
   }
 
+  public void add(int index, T t){
+    MyArray[index] = t;
+  }
+
+  public boolean contains(T t){
+    for(int i = 0; i < MyArray.length; i++){
+      MyArray[i] = t;
+      return true;
+    }
+    return false;
+  }
+
   public T get(int index){
     return MyArray[index];
   }
