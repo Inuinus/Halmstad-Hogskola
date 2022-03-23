@@ -40,7 +40,12 @@ public class MyArrayList<T>{
   }
 
   public T get(int index){
+    if(!contains(MyArray[index]))
+      return null;
+
     return MyArray[index];
   }
+
+
 
 }
