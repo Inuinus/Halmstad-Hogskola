@@ -55,7 +55,25 @@ public class MyArrayList<T>{
     return -1;
   }
 
-  public T remove(int index){
+  public T Remove(int index){
+    T temp = MyArray[index];
+    for(int i = index + 1; i < size; i++){
+      MyArray[index] = MyArray[index + 1];
+    }
+    return temp;
+  }
+
+  public boolean remove(T t){
+    for(int i = 0; i < MyArray.length; i++){
+      if(MyArray[i] == t){
+        Remove(i);
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public int removeAll(T t){
     
   }
 
