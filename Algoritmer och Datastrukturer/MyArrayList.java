@@ -46,6 +46,18 @@ public class MyArrayList<T>{
     return MyArray[index];
   }
 
+  public int indexOf(T t){
+    for(int i = 0; i < MyArray.length; i++){
+      if(MyArray[i] == t){
+        return i;
+      }
+    }
+    return -1;
+  }
+
+  public T remove(int index){
+    
+  }
 
 
 }
