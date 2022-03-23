@@ -18,7 +18,6 @@ public class MyArrayList<T>{
         newList[i] = MyArray[i];
       }
     }
-    djsanfkjdnsalfn
     for (int i = 0;i < newList.length; i++) {
       System.out.println(newList[i]);
     }
