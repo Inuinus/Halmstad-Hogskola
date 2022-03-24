@@ -1,9 +1,10 @@
 import java.security.Timestamp;
 
-public class MyArrayList<T>{
+public class MyArrayList<T> implements Iterable<T>{
 
   private T[] MyArray;          //Lagrar elementen
   int size;                     //Hur många elements
+  public char[] set;
 
   public MyArrayList(){         //Tom arraylist(EMPTY)
     MyArray = (T[]) new Object[10];
@@ -74,8 +75,46 @@ public class MyArrayList<T>{
   }
 
   public int removeAll(T t){
-    
+    int count = 0;
+    for(int i = 0; i < MyArray.length; i++){
+      if(MyArray[i] == t){
+        Remove(i);
+        count++;
+      }
+      return count;
+    }
+    return 0;
   }
 
+  public T set(int index, T t){
+    T temp = MyArray[index];
+    MyArray[index] = t;
+
+    return temp;
+  }
+
+  public boolean isEmpty(){
+    for(int i = 0; i < MyArray.length; i++){
+      if(MyArray[i] == null)
+      return true;
+    }
+    return false;
+  }
+
+  public int size(){
+    return(MyArray.length);
+  }
+
+  public Iterator<E> iterator(){
+
+  }
+
+  public void clear(){
+    return ;
+  }
+
+  public String toString(){
+    return "m";
+  }
 
 }
