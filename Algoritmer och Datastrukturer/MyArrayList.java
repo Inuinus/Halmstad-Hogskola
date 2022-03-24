@@ -110,7 +110,9 @@ public class MyArrayList<T> implements Iterable<T>{
   }
 
   public void clear(){
-    return ;
+    for(int i = 0; i < MyArray.length; i++){
+      MyArray[i] = null;
+    }
   }
 
   public String toString(){
