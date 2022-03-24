@@ -1,4 +1,5 @@
 import java.security.Timestamp;
+import java.util.*;
 
 public class MyArrayList<T> implements Iterable<T>{
 
@@ -105,10 +106,20 @@ public class MyArrayList<T> implements Iterable<T>{
     return(MyArray.length);
   }
 
-  public Iterator<E> iterator(){
+  public Iterator<T> iterator(){
 
+      return new Iterator<T>(){
+        int index = 0;
+        public boolean hasNext(){
+          return index < size;
+        }
+
+        public T next(){
+          return MyArray[index++];
+        }
+      };
   }
-
+  
   public void clear(){
     for(int i = 0; i < MyArray.length; i++){
       MyArray[i] = null;
@@ -116,7 +127,15 @@ public class MyArrayList<T> implements Iterable<T>{
   }
 
   public String toString(){
-    return "m";
+    String string = "[";
+    for(T element : MyArray){
+      if (element != null){
+        string += element + ", ";
+      }
+    }
+    string += "]";
+    return string;
   }
+
 
 }
