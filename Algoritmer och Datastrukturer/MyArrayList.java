@@ -25,7 +25,6 @@ public class MyArrayList<T> implements Iterable<T>{
     }
     MyArray[size] = t;
     size++;
-    //System.out.println(MyArray[size]); //Kontroll för att se så det funkar.//
     return true;
   }
 
