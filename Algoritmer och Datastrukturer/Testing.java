@@ -3,10 +3,23 @@ public class Testing {
 
  
     public static void main(String[] args) {
-        MyArrayList<Integer> penis = new MyArrayList<>(); 
-       /* penis.add(1);
-        System.out.print(penis.get(0));
-*/
-        System.out.print(penis.toString());   
+        MyArrayList<Integer> array = new MyArrayList<>(); 
+        //array.add(1);
+        //array.add(5);
+        System.out.println(array);
+        //System.out.print(array.get(0));
+        array.clear();
+        System.out.println(array);
+        System.out.println(array.toString());   
+        //System.out.println(array.contains(1));
+
+        array.add(1);
+        array.add(5);
+        array.add(7);
+        array.add(23);
+        System.out.println(array);
+        System.out.println(array.indexOf(23));
+        array.Remove(2);
+        System.out.println(array);
     }
 }
