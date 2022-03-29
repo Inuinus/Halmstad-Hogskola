@@ -19,7 +19,7 @@ public class Testing {
         array.add(23);
         System.out.println(array);
         System.out.println(array.indexOf(23));
-        array.Remove(2);
+        array.Remove(0);
         System.out.println(array);
     }
 }
