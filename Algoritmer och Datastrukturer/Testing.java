@@ -21,5 +21,16 @@ public class Testing {
         System.out.println(array.indexOf(23));
         array.Remove(0);
         System.out.println(array);
+        array.add(5);
+        System.out.println(array);
+        System.out.println(array.remove(5));
+        System.out.println(array);
+
+        array.add(5);
+        array.add(5);
+        System.out.println(array);
+        System.out.println(array.removeAll(5));
+        System.out.println(array);
+        
     }
 }

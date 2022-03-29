@@ -57,15 +57,14 @@ public class MyArrayList<T> implements Iterable<T>{
   }
 
   public T Remove(int index){
-    if(MyArray[index] != null){
+    if(index <= size && index >= 0){
       MyArray[index] = null;
-      size = size - 1;
-      for(int i = index + 1; i < MyArray.length - 1; i++){
-        MyArray[i] = MyArray[i+1];
+      for(int i = index+1; i < MyArray.length-1; i++){
+        MyArray[i-1] = MyArray[i];
       }
-      return MyArray[index];
+      size = size - 1;
     }
-    else{return null;}
+    return null;
   }
 
   public boolean remove(T t){
@@ -80,14 +79,17 @@ public class MyArrayList<T> implements Iterable<T>{
 
   public int removeAll(T t){
     int count = 0;
-    for(int i = 0; i < MyArray.length; i++){
-      if(MyArray[i] == t){
-        Remove(i);
+    for(int i = 0; i < MyArray.length-1; i++){
+      while (MyArray[i] == t){
+        MyArray[i] = null;
         count++;
+        for(int j = i; j < MyArray.length-1; j++){
+          MyArray[j] = MyArray[j+1];
+        }
       }
-      return count;
     }
-    return 0;
+    size = size - count;
+    return count;
   }
 
   public T set(int index, T t){
