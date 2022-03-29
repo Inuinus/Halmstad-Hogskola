@@ -35,7 +35,7 @@ public class Testing {
         array.set(1, 2);
         System.out.println(array);
         
-   //     System.out.println(array.isEmpty());
+        System.out.println(array.isEmpty());
 
         System.out.println(array.size());
 
