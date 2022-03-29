@@ -31,6 +31,13 @@ public class Testing {
         System.out.println(array);
         System.out.println(array.removeAll(5));
         System.out.println(array);
+
+        array.set(1, 2);
+        System.out.println(array);
         
+   //     System.out.println(array.isEmpty());
+
+        System.out.println(array.size());
+
     }
 }
