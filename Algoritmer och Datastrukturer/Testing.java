@@ -38,6 +38,10 @@ public class Testing {
         System.out.println(array.isEmpty());
 
         System.out.println(array.size());
+        array.clear();
+        System.out.println(array.isEmpty());
+        array.add(5);
+        System.out.println(array.isEmpty());
 
     }
 }
