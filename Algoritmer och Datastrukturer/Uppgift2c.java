@@ -5,9 +5,9 @@ public class Uppgift2c{
         Land biggest = list.get(0);
         Land smallest = list.get(0);
         for (int i = 1; i < list.size; i++) {
-            if(list.get(i).compareTo(biggest) > 0){   // compareTo jämför ju beroende på vilken datatyp elementen är...
-                biggest = list.get(i);  // alltså måste vi på uppgift 2b skapa 3 helt olika datatyper?
-            }
+            if(list.get(i).compareTo(biggest) > 0){   
+                biggest = list.get(i);  
+                 }
             if((list.get(i).compareTo(smallest) < 0)){
                 smallest = list.get(i);
             }
@@ -22,8 +22,8 @@ public class Uppgift2c{
         Land biggest = list.get(0);
         Land smallest = list.get(0);
         for (int i = 1; i < list.size; i++) {
-            if(c.compare(list.get(i),biggest) > 0){   // compareTo jämför ju beroende på vilken datatyp elementen är...
-                biggest = list.get(i);  // alltså måste vi på uppgift 2b skapa 3 helt olika datatyper?
+            if(c.compare(list.get(i),biggest) > 0){ 
+                biggest = list.get(i); 
             }
             if(c.compare(list.get(i),smallest) < 0){
                 smallest = list.get(i);
