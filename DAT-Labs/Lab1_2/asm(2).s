@@ -16,6 +16,7 @@ LOOP    CMP R2, # 99    ; compare (R2) to 99
 CMP0    CMP R1, # 9     ; R1 < 9 diffenrent > increase R0,R1,R2 by 1
         BNE ADD0
         MOV R1, # 0     ; (R0) = 0
+        ADD R2, R2, # 1 ; update first: (R2) < (R2) + 1
         ADD R0, R0, # 13 ; update first: (R0) < (R0) + 13
         B LOOPE
 ADD0    ADD R0, R0, # 1 ; update first: (R0) < (R0) + 1
