@@ -90,9 +90,103 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
     //If the value "t" is in the list, all appearances of 
     //t gets removed and return the value of all t. If nothing removes return 0
     public int remove(T t){
+        int counter = 0;
+        if(isEmpty()){
+            return 0;
+        }
 
+        //If the size is 1 and the value of head = t, we can just remove the single node
+        if(size == 1 && head.value.equals(t)){
+            removeLast();
+            return 1;
+        }
+
+        ListNode<T> node1 = head;
+        ListNode<T> node2 = node1.next;
+        ListNode<T> node3 = node2.next;
+
+        while(node3 != null){
+            if(node2.value.equals(t)){
+                node1.next = node3;
+                node3.previous = node1;
+
+                node2 = node3;
+                node3 = node2.next;
+                counter++;
+            }else{
+                node1 = node1.next;
+                node2 = node2.next;
+                node3 = node3.next;   
+            }
+        }
+
+        if(tail.value.equals(t)){
+            removeLast();
+            counter++;
+        }
+
+        return counter;
     }
 
+    //Removes the value at Index and returns this value;
+    /*public T remove(int index){
+        return 0;
+    }*/
+
+    //Removes the last value of the list and returns this
+    public T removeLast(){
+        if(isEmpty()){
+            return null;
+        }
+
+        ListNode<T> node = head;
+        while(node.next != null){
+            node = node.next;
+        }
+
+        //if we only have one node
+        if(size == 1){
+            head = null;
+            tail = null;
+            size--;
+            return node.value;
+        }
+
+        tail = node.previous;
+        node.previous.next = null;
+        node.previous = null;
+        node.next = null;
+        size--;
+        return node.value;
+    }
+
+    //Removes the First value of the list and returns this
+    public T removeFirst(){
+        if(isEmpty()){
+            return null;
+        }
+
+        ListNode<T> node = head;
+
+        if(size == 1){
+            head = null;
+            tail = null;
+            size--;
+            return node.value;
+        }
+
+        head = node.next;
+        head.previous = null;
+        size--;
+        return node.value;
+    }
+
+    //Returns the size of the list
+    public int size(){
+        return size;
+    }
+
+    //Returns a iterator for the list
     public Iterator<T> iterator() {
         return new Iterator<T>()
         {
@@ -109,5 +203,25 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
                 return tNode.value;
             }
         };
+    }
+
+       //Clears the Double Linked List
+       public void clear(){
+        head = null;
+        tail = null;
+        size = 0;
+    }
+
+    //Converts list to a String
+    public String toString(){
+        String s = "(";
+        for (T t : this){
+            s += t + ", ";
+        }   
+        
+        if (!isEmpty())
+            s = s.substring(0,s.length()-2);
+        s += ")";
+        return s; 
     }
 }
