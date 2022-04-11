@@ -1,0 +1,97 @@
+###############################################################################
+#
+# IAR ELF Linker V9.20.4.327/W64 for ARM                  11/Apr/2022  13:45:53
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =
+#        C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab1_3\Debug\Exe\Lab1_3.out
+#    Map file     =
+#        C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab1_3\Debug\List\Lab1_3.map
+#    Command line =
+#        -f
+#        C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab1_3\Debug\Exe\Lab1_3.out.rsp
+#        ("C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab1_3\Debug\Obj\asm(2).o"
+#        C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab1_3\Debug\Obj\startup_sam3x.o
+#        --no_out_extension -o
+#        C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab1_3\Debug\Exe\Lab1_3.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab1_3\Debug\List\Lab1_3.map
+#        --config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\config\linker\Microchip\sam3x8\sram.icf" --semihosting
+#        --no_library_search --entry __iar_program_start --vfe --text_out
+#        locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x2007'0000 { ro section .intvec };
+"P1":  place in [from 0x2007'0000 to 0x2008'7fff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2007'0000 to 0x2008'7fff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P1-P2"
+
+
+  Section  Kind         Address   Size  Object
+  -------  ----         -------   ----  ------
+"A0":                             0xf4
+  .intvec  ro code  0x2007'0000   0xf4  startup_sam3x.o [1]
+                  - 0x2007'00f4   0xf4
+
+"P1-P2":                         0x298
+  .text    ro code  0x2007'00f4  0x1cc  startup_sam3x.o [1]
+  .text    ro code  0x2007'02c0   0xcc  asm(2).o [1]
+                  - 0x2007'038c  0x298
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+  0x2007'038c  0x2008'7fff  0x1'7c74
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module           ro code
+    ------           -------
+command line/config:
+    ------------------------
+    Total:
+
+C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab1_3\Debug\Obj: [1]
+    asm(2).o             204
+    startup_sam3x.o      704
+    ------------------------
+    Total:               908
+
+----------------------------
+    Grand Total:         908
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address  Size  Type      Object
+-----                    -------  ----  ----      ------
+__iar_program_start  0x2007'0239        Code  Gb  startup_sam3x.o [1]
+main                 0x2007'02c1        Code  Gb  asm(2).o [1]
+
+
+[1] = C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab1_3\Debug\Obj
+
+  908 bytes of readonly  code memory
+
+Errors: none
+Warnings: none
