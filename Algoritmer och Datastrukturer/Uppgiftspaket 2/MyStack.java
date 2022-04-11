@@ -12,14 +12,20 @@ public class MyStack<T extends Comparable<T>> implements Iterable<T> {
         return myStack.isEmpty();
     }
 
+    //Returns the Top-value on the stack
     public T peek(){
         return myStack.getLast();
     }
 
+    //Returns the Top-value on the stack and then removes it from the stack
     public T pop(){
         T value = myStack.getLast();
         myStack.removeLast();
         return value;
+    }
+
+    public void push(T t){
+        myStack.add(t);
     }
 
     public Iterator<T> iterator() {
