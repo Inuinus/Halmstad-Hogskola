@@ -34,6 +34,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
         size++;
     }
 
+    //Add "t" on the place INDEX in the list
     public void add(int index, T t){
         if(index < 0 || index >= size){
             throw new IndexOutOfBoundsException(
@@ -53,6 +54,43 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
         node.next = new ListNode<T>(t, node, node.next);
         size++;
+    }
+
+    //Return the value on INDEX
+    public T get(int index){
+        if(isEmpty()){
+            return null;
+        }
+
+        if(index > size - 1){
+            return null;
+        }
+
+        ListNode<T> node = head;
+        for(int i = 0; i < index; i++){
+            node = node.next;
+        }
+        return node.value;
+    }
+
+    //Return the first value of the list
+    public T getFirst(){
+        if(isEmpty()){
+            return null;
+        }
+        
+        return head.value;
+    }
+
+    //Return the last value of the list
+    public T getLast(){
+        return tail.value;
+    }
+
+    //If the value "t" is in the list, all appearances of 
+    //t gets removed and return the value of all t. If nothing removes return 0
+    public int remove(T t){
+
     }
 
     public Iterator<T> iterator() {
