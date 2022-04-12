@@ -167,9 +167,17 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
     }
 
     //Removes the value at Index and returns this value;
-    /*public T remove(int index){
-        return 0;
-    }*/
+    public T remove(int index){
+        if(isEmpty()){
+            return null;
+        }
+
+        if(size == 1){
+            removeLast();
+        }
+
+        return null;
+    }
 
     //Removes the last value of the list and returns this
     public T removeLast(){

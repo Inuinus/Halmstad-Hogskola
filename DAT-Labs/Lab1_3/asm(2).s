@@ -51,7 +51,7 @@ CON2    CMP R2, R3                      ;compare R2 to R3
         ADD R8, R8, R11                 ;Add ALL of R11 to R8
         ADD R2, R2, #1                  ;increase R2 by 1 (counter)
         B CON2                          ;jump to AVG
-DIV     UDIV R8, R3                     ;Divides R8 by R3   
+DIV     UDIV R8, R3                     ;Divides R8 by R3 ;UDIV = Unassigned Divides(Positive numbers+), SDIV = Signed Divides(+-)  
 STOP B STOP
 
         ALIGNROM 2
