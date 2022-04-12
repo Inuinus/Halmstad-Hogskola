@@ -5,7 +5,7 @@ public class ListNode<T>{
     ListNode<T> previous;
     ListNode<T> next;
     
-    public ListNode(T value, ListNode<T> next, ListNode<T> previous){
+    public ListNode(T value, ListNode<T> previous, ListNode<T> next){
         this.value = value;
         this.next = next;
         this.previous = previous;

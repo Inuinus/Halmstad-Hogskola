@@ -1,6 +1,8 @@
 import org.junit.*;
 import static org.junit.Assert.assertEquals;
 
+import javax.print.attribute.standard.Sides;
+
 public class DoublyLinkedList_test {
 
     static DoublyLinkedList<Integer> list1;
@@ -24,15 +26,15 @@ public class DoublyLinkedList_test {
     }
 
     @Test                                               
-    public void add_should_link_next_and_prev() {
+    public void add_should_link_next_and_previous() {
         list1.add(1);
         list1.add(2);
         list1.add(3);
         assertEquals(3, list1.size);
-        assertEquals(1, (Object) list1.head.next.prev.data);
-        assertEquals(2, (Object) list1.head.next.data);
-        assertEquals(3, (Object) list1.head.next.next.data);
-        assertEquals(null, list1.head.prev);
+        assertEquals(1, (Object) list1.head.next.previous.value);
+        assertEquals(2, (Object) list1.head.next.value);
+        assertEquals(3, (Object) list1.head.next.next.value);
+        assertEquals(null, list1.head.previous);
     }
 
     @Test                                               
@@ -40,8 +42,8 @@ public class DoublyLinkedList_test {
         list1.add(1);
         list1.add(2);
         list1.add(3);
-        assertEquals(1, (Object) list1.head.data);
-        assertEquals(3, (Object) list1.tail.data);
+        assertEquals(1, (Object) list1.head.value);
+        assertEquals(3, (Object) list1.tail.value);
         assertEquals(3, (Object) list1.size);
     }
 
@@ -49,9 +51,9 @@ public class DoublyLinkedList_test {
     public void add_to_empty_list() {
         list1.add(1);
         assertEquals(1, list1.size);
-        assertEquals(1, (Object) list1.head.data);
-        assertEquals(1, (Object) list1.tail.data);
-        assertEquals(null, list1.head.prev);
+        assertEquals(1, (Object) list1.head.value);
+        assertEquals(1, (Object) list1.tail.value);
+        assertEquals(null, list1.head.previous);
         assertEquals(null, list1.head.next);
     }
 
@@ -85,15 +87,15 @@ public class DoublyLinkedList_test {
         list1.add(2);
         list1.add(16);
         list1.add(8);
-        list1.addAtFirstSmaller(1);
+        //list1.addAtFirstSmaller(1);
         System.out.println(list1);
         assertEquals(1, (Object) list1.get(0));
     }
 
     @Test                                               
     public void addAtFirstSmaller_in_empty_list() {
-        list1.addAtFirstSmaller(1);
-        assertEquals(1, (Object) list1.get(0));
+    list1.addAtFirstSmaller(1);
+    assertEquals(1, (Object) list1.get(0));
         list1.addAtFirstSmaller(2);
         list1.addAtFirstSmaller(3);
         System.out.println(list1);
@@ -101,7 +103,7 @@ public class DoublyLinkedList_test {
     }
 
     @Test                                               
-    public void get_should_return_node_data_at_index() {
+    public void get_should_return_node_value_at_index() {
         assertEquals(null, (Object) list1.get(0));
         assertEquals(null, (Object) list1.get(-1));
         list1.add(1);
@@ -115,7 +117,7 @@ public class DoublyLinkedList_test {
     }
 
     @Test                                               
-    public void getLast_should_return_last_data() {
+    public void getLast_should_return_last_value() {
         list1.add(1);
         list1.add(2);
         list1.add(3);

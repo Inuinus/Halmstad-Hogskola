@@ -21,29 +21,67 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
     public void add(T t){
         if(isEmpty()){
             head = new ListNode<T>(t);
+            tail = head;
             size++;
             return;
         }
 
         ListNode<T> node = head;
+
         while(node.next != null){
             node = node.next;
         }
+
         node.next = new ListNode<T>(t, node, null);
         tail = node.next;
         size++;
     }
 
+    //TODO remove this linus
+    public void printNode(int index) {
+        
+        ListNode<T> node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+
+        String str_prev;
+        String str_next;
+
+        try {
+			str_prev = String.valueOf(node.previous.value);
+		}
+		catch(NullPointerException e) {
+			str_prev = "null";
+		}
+
+        try {
+			str_next = String.valueOf(node.next.value);
+		}
+		catch(NullPointerException e) {
+			str_next = "null";
+		}
+
+        System.out.println("" + str_prev + " | " + node.value + " | " + str_next);
+        return;
+    }
+
     //Add "t" on the place INDEX in the list
     public void add(int index, T t){
-        if(index < 0 || index >= size){
+        if(index < 0){
             throw new IndexOutOfBoundsException(
                 "Vid add(int index, T t) så är inte index tillåtet!"
             );
         }
 
+        if(index >= size){
+            add(t);
+            return;
+        }
+
         if(index == 0){
-            head = new ListNode<T>(t);
+            head = new ListNode<T>(t, null, head);
+            head.next.previous = head;
             size++;
             return;
         }
@@ -223,5 +261,16 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
             s = s.substring(0,s.length()-2);
         s += ")";
         return s; 
+    }
+
+    public static void main(String[] args) {
+        DoublyLinkedList<Integer> list1 = new DoublyLinkedList<>();
+
+        list1.add(1);
+        list1.add(2);
+        list1.add(3);
+        System.out.println(list1);
+        list1.printNode(2);
+
     }
 }
