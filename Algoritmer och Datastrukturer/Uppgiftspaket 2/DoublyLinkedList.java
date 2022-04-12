@@ -173,7 +173,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
         }
 
         if(size == 1){
-            removeLast();
+            return removeLast();
         }
 
         return null;
