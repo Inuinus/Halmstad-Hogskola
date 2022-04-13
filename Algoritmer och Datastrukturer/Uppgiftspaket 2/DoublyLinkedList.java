@@ -167,7 +167,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
     }
 
     //Removes the value at Index and returns this value;
-    public T remove(int index){
+    public T Remove(int index){
         if(isEmpty()){
             return null;
         }
@@ -176,7 +176,30 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
             return removeLast();
         }
 
-        return null;
+        ListNode<T> node1 = head.previous;
+        ListNode<T> node2 = head;
+        ListNode<T> node3 = node2.next;
+        T tnode2 = null;
+
+        for (int i = 0; i < this.size; i++) {
+            if(i == index){
+                node1.next = node3;
+                node3.previous = node1;
+
+                tnode2 = node2.value;
+
+                node2 = node3;
+                node3 = node2.next;
+                break;
+            }else{
+                node1 = node1.next;
+                node2 = node2.next;
+                node3 = node3.next;   
+            }
+        }
+
+        //Return the value on the place index
+        return tnode2;
     }
 
     //Removes the last value of the list and returns this
@@ -274,11 +297,12 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
     public static void main(String[] args) {
         DoublyLinkedList<Integer> list1 = new DoublyLinkedList<>();
 
-        list1.add(1);
         list1.add(2);
-        list1.add(3);
+        list1.add(4);
+        list1.add(6);
+        list1.add(8);
+        list1.Remove(0);
         System.out.println(list1);
-        list1.printNode(2);
 
     }
 }
