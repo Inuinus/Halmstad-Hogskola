@@ -12,6 +12,22 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
         size = 0;
     }
 
+    //Custom method to check if the value is null.
+    public void ifNull(Object value){
+        if(value == null){
+            throw new NullPointerException("Null is not allowed!");
+        }
+        return;
+    }
+
+    //Custom method to check if the value is negative or not.
+    public void ifNegative(int value){
+        if(value < 0){
+            throw new IllegalArgumentException("Negative values is not allowed!");
+        }
+        return;
+    }
+
     //Is the list Empty?
     public boolean isEmpty(){
         return size == 0;
@@ -19,6 +35,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
     //Add "t" in the end of the list
     public void add(T t){
+        ifNull(t);
+
         if(isEmpty()){
             head = new ListNode<T>(t);
             tail = head;
@@ -68,6 +86,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
     //Add "t" on the place INDEX in the list
     public void add(int index, T t){
+        ifNegative(index);
+
         if(index < 0){
             throw new IndexOutOfBoundsException(
                 "Vid add(int index, T t) så är inte index tillåtet!"
@@ -97,6 +117,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
     //Return the value on INDEX
     public T get(int index){
+        ifNegative(index);
+
         if(isEmpty()){
             return null;
         }
@@ -129,6 +151,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
     //If the value "t" is in the list, all appearances of 
     //t gets removed and return the value of all t. If nothing removes return 0
     public int remove(T t){
+        ifNull(t);
+
         int counter = 0;
         if(isEmpty()){
             return 0;
@@ -171,6 +195,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
     //Removes the value at Index and returns this value;
     public T Remove(int index){
+        ifNegative(index);
+
         if(isEmpty()){
             return null;
         }
@@ -296,6 +322,34 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
             s = s.substring(0,s.length()-2);
         s += ")";
         return s; 
+    }
+
+    public void reverse(){
+        MyStack<T> myStack = new MyStack<>();
+        for(T value: this){                 //Add all the nodes in the stack
+            myStack.push(value);
+        }
+
+        int sizeStack = size;
+        this.clear();                       //clears the list from all the nodes
+        for(int i = 0; i < sizeStack; i++){
+            add(myStack.pop());
+        }
+
+
+    }
+
+    public void addAtFirstSmaller(T t){
+        ifNull(t);
+
+        ListNode<T> node = tail;
+
+        if(isEmpty()){
+            add(t);
+            return;
+        }
+
+
     }
 
     public static void main(String[] args) {
