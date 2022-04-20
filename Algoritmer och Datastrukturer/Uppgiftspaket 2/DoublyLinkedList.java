@@ -91,6 +91,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
             node = node.next;
 
         node.next = new ListNode<T>(t, node, node.next);
+        node.next.next.previous = node.next;
         size++;
     }
 
@@ -133,14 +134,15 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
             return 0;
         }
 
+        int count = 0;
         //If the size is 1 and the value of head = t, we can just remove the single node
-        if(size == 1 && head.value.equals(t)){
-            removeLast();
-            return 1;
+        if(head.value.equals(t)){
+            removeFirst();
+            count++;
         }
 
-        ListNode<T> node1 = head;
-        ListNode<T> node2 = node1.next;
+        ListNode<T> node1 = null;
+        ListNode<T> node2 = head;
         ListNode<T> node3 = node2.next;
 
         while(node3 != null){
@@ -150,20 +152,21 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
                 node2 = node3;
                 node3 = node2.next;
-                counter++;
+                size--;
+                count++;
             }else{
-                node1 = node1.next;
-                node2 = node2.next;
+                node1 = node2;
+                node2 = node3;
                 node3 = node3.next;   
             }
         }
 
         if(tail.value.equals(t)){
             removeLast();
-            counter++;
+            count++;
         }
 
-        return counter;
+        return count;
     }
 
     //Removes the value at Index and returns this value;
@@ -172,34 +175,36 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
             return null;
         }
 
-        if(size == 1){
+        if(index == 0){
+            return removeFirst();
+        }
+
+        if(index == size - 1){
             return removeLast();
         }
 
-        ListNode<T> node1 = head.previous;
+        ListNode<T> node1 = null;
         ListNode<T> node2 = head;
         ListNode<T> node3 = node2.next;
-        T tnode2 = null;
+        T vNode = null; //Save index in this node
 
-        for (int i = 0; i < this.size; i++) {
+        for (int i = 0; i < index; i++) {
             if(i == index){
                 node1.next = node3;
                 node3.previous = node1;
 
-                tnode2 = node2.value;
-
+                vNode = node2.value;
                 node2 = node3;
-                node3 = node2.next;
-                break;
+                node3 = node3.next;
             }else{
-                node1 = node1.next;
-                node2 = node2.next;
+                node1 = node2;
+                node2 = node3;
                 node3 = node3.next;   
             }
         }
 
         //Return the value on the place index
-        return tnode2;
+        return vNode;
     }
 
     //Removes the last value of the list and returns this
@@ -224,7 +229,6 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
         tail = node.previous;
         node.previous.next = null;
         node.previous = null;
-        node.next = null;
         size--;
         return node.value;
     }
