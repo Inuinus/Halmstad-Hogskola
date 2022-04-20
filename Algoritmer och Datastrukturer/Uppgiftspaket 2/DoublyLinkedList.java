@@ -339,16 +339,29 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
     }
 
+    //Assignment 3a
     public void addAtFirstSmaller(T t){
         ifNull(t);
-
-        ListNode<T> node = tail;
+        ListNode<T> node = tail;    //g            
 
         if(isEmpty()){
             add(t);
             return;
         }
 
+        for(int i = 0; i < size + 1; i++){
+            if(node.value.compareTo(t) <= -1){
+             add(size - i, t);
+             return;
+            }
+            
+            if(node.previous == null){
+                add(0, t);
+                return;
+            }
+
+            node = node.previous;
+        }
 
     }
 
