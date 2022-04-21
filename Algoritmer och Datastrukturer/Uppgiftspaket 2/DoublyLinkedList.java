@@ -1,5 +1,4 @@
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
     ListNode<T> head;
@@ -342,7 +341,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
     //Assignment 3a
     public void addAtFirstSmaller(T t){
         ifNull(t);
-        ListNode<T> node = tail;    //g            
+        ListNode<T> node = tail; //           
 
         if(isEmpty()){
             add(t);
@@ -366,14 +365,22 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
     }
 
     public static void main(String[] args) {
-        DoublyLinkedList<Integer> list1 = new DoublyLinkedList<>();
+        // ======= testing speed of sort ============================
+        Random rand = new Random();
+        Integer[] arr = new Integer[1000];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rand.nextInt(100);
+        }
 
-        list1.add(2);
-        list1.add(4);
-        list1.add(6);
-        list1.add(8);
-        list1.Remove(0);
-        System.out.println(list1);
+        long start = System.currentTimeMillis(); // START clock
+        
+        Comparable[] array123 = InsertionSort.sort(arr);
+
+        long finish = System.currentTimeMillis(); // FINISH clock
+        Long computationalTime = finish - start;
+        System.out.println(Arrays.toString(array123));
+        System.out.println("Time: " + computationalTime + " ms");
+        // ===============================================================
 
     }
 }
