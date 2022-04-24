@@ -197,11 +197,11 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
             return node.value;
         }
 
-        tail = node.previous;//if none of the statements is right this will happen
-        node.previous.next = null;
-        node.previous = null;
-        node.next = null;
-        size--;
+        tail = node.previous;//makes node infront of the last to tail
+        node.previous.next = null;//new tail points at null
+        node.previous = null;//old tail becomnes null
+        node.next = null;//set the next node to null;
+        size--;//decrease the size of the list
         return node.value;
     }
 
@@ -213,16 +213,16 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
         ListNode<T> node = head;
 
-        if(size == 1){
-            head = null;
+        if(size == 1){//if there only is one node
+            head = null;//remove hte value and returns
             tail = null;
             size--;
             return node.value;
         }
 
-        head = node.next;
-        head.previous = null;
-        size--;
+        head = node.next;//makes the node after the last to tail
+        head.previous = null;//setts the old head to tail
+        size--;//decrease the size
         return node.value;
     }
 
@@ -236,6 +236,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
         return new Iterator<T>()
         {
             ListNode<T> node = head;
+            
             public boolean hasNext()
             {
                 return node != null;
@@ -250,8 +251,8 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
         };
     }
 
-       //Clears the Double Linked List
-       public void clear(){
+    //Clears the Double Linked List
+    public void clear(){
         head = null;
         tail = null;
         size = 0;
