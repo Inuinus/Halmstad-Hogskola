@@ -155,7 +155,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
         ListNode<T> node1 = null;
         ListNode<T> node2 = head;
-        ListNode<T> node3 = node2.next;
+        ListNode<T> node3 = head.next;
         T vNode = null; //Save index in this node
 
         for (int i = 0; i < index + 1; i++) {
