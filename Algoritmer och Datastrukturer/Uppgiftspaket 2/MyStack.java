@@ -24,21 +24,20 @@ public class MyStack<T extends Comparable<T>> implements Iterable<T> {
         return value;
     }
 
-    public void push(T t){
+    public void push(T t){//adds the value on the top of the list
         myStack.add(t);
     }
 
-    public Iterator<T> iterator() {
+    public Iterator<T> iterator() {//goes through the list
         return new Iterator<T>()
         {
             ListNode<T> node = myStack.head;
-            public boolean hasNext()
-            {
+            
+            public boolean hasNext(){//return the nodes that it encounters til null
                 return node != null;
             }
             
-            public T next()
-            {
+            public T next(){//return value on each node
                 ListNode<T> tNode = node;
                 node = node.next;
                 return tNode.value;

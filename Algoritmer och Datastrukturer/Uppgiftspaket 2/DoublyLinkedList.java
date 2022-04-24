@@ -1,11 +1,11 @@
 import java.util.*;
 
 public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
-    ListNode<T> head;
-    ListNode<T> tail;
-    int size;
+    ListNode<T> head; //names
+    ListNode<T> tail; //names
+    int size;         //variable for size
 
-    public DoublyLinkedList(){
+    public DoublyLinkedList(){//Empty Linked List
         head = null;
         tail = null;
         size = 0;
@@ -29,54 +29,54 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
     //Is the list Empty?
     public boolean isEmpty(){
-        return size == 0;
+        return size == 0;       //if size == 0, it will return true, if size >= 0 false
     }
 
     //Add "t" in the end of the list
     public void add(T t){
-        ifNull(t);
+        ifNull(t);          //Using the custom method to check if the list is NULL
 
         if(isEmpty()){
-            head = new ListNode<T>(t);
-            tail = head;
-            size++;
+            head = new ListNode<T>(t);//Create a new node that points to head
+            tail = head;//Tail will become our old head
+            size++;//Increase our size with 1 to keep track of the size
             return;
         }
 
-        ListNode<T> node = head;
+        ListNode<T> node = head;//Gives node the name head
 
         while(node.next != null){
-            node = node.next;
+            node = node.next;   //while our next node isnt null, node will become the next node
         }
 
-        node.next = new ListNode<T>(t, node, null);
+        node.next = new ListNode<T>(t, node, null); //Creates a new node that will become our tail
         tail = node.next;
         size++;
     }
 
     //Add "t" on the place INDEX in the list
     public void add(int index, T t){
-        ifNegative(index);
+        ifNegative(index);//Check if negative(custom method)
 
-        if(index < 0){
+        if(index < 0){//Throw index out of bounds when index < 0
             throw new IndexOutOfBoundsException(
                 "Vid add(int index, T t) så är inte index tillåtet!"
             );
         }
 
-        if(index >= size){
+        if(index >= size){//adds "t" in the end of the list when index is out of bounds
             add(t);
             return;
         }
 
-        if(index == 0){
+        if(index == 0){//index == 0, create new node at head, increase the size
             head = new ListNode<T>(t, null, head);
-            head.next.previous = head;
+            head.next.previous = head; //connect the new head to the next node
             size++;
             return;
         }
 
-        ListNode<T> node = head;
+        ListNode<T> node = head;//makes a temp node
         for(int i = 0; i < index - 1; i++)
             node = node.next;
 
@@ -97,7 +97,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
             return null;
         }
 
-        ListNode<T> node = head;
+        ListNode<T> node = head;//makes a temp node
         for(int i = 0; i < index; i++){
             node = node.next;
         }
@@ -126,10 +126,10 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
         int i = 0;
         int counter = 0;
 
-        for (T node_data : this) {
-            if (node_data.equals(t)) {
-                remove(i);
-                counter++;
+        for (T node_data : this) {//for each loop
+            if (node_data.equals(t)) {//if the data equals "t"
+                remove(i);//remove this on the spot(i)
+                counter++;//increase the counter
                 i--; // since size decreases the index must decrease
             }
             i++;
@@ -153,21 +153,21 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
             return removeLast();
         }
 
-        ListNode<T> node1 = null;
-        ListNode<T> node2 = head;
-        ListNode<T> node3 = head.next;
+        ListNode<T> node1 = null;//give names
+        ListNode<T> node2 = head;//makes a temp node
+        ListNode<T> node3 = head.next;//makes a temp node
         T vNode = null; //Save index in this node
 
-        for (int i = 0; i < index + 1; i++) {
-            if(i == index){
-                vNode = node2.value;
+        for (int i = 0; i < index + 1; i++) {//checks the list for the value "index"
+            if(i == index){//changes the order etc
+                vNode = node2.value;//take the value to a tempNode for easy return statement
                 node1.next = node3;
                 node3.previous = node1;
 
                 node2 = node3;
                 node3 = node2.next;
                 size--;
-            }else{
+            }else{//else this thing
                 node1 = node2;
                 node2 = node3;
                 node3 = node3.next;   
@@ -184,7 +184,7 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
             return null;
         }
 
-        ListNode<T> node = head;
+        ListNode<T> node = head;//makes a temp node
         while(node.next != null){
             node = node.next;
         }
@@ -192,12 +192,12 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
         //if we only have one node
         if(size == 1){
             head = null;
-            tail = null;
+            tail = null;//removes the head and tail to eliminate the whole node
             size--;
             return node.value;
         }
 
-        tail = node.previous;
+        tail = node.previous;//if none of the statements is right this will happen
         node.previous.next = null;
         node.previous = null;
         node.next = null;
@@ -260,16 +260,17 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
     //Converts list to a String
     public String toString(){
         String s = "(";
-        for (T t : this){
+        for (T t : this){//for each node in the list, insert node + , in string(s)
             s += t + ", ";
         }   
         
-        if (!isEmpty())
-            s = s.substring(0,s.length()-2);
+        if (!isEmpty())//if its empty
+            s = s.substring(0,s.length()-2);//removes space between the last node in the string and )
         s += ")";
         return s; 
     }
 
+    //2b
     public void reverse(){
         MyStack<T> myStack = new MyStack<>();
         for(T value: this){                 //Add all the nodes in the stack
@@ -278,30 +279,28 @@ public class DoublyLinkedList<T extends Comparable<T>> implements Iterable<T>{
 
         int sizeStack = size;
         this.clear();                       //clears the list from all the nodes
-        for(int i = 0; i < sizeStack; i++){
+        for(int i = 0; i < sizeStack; i++){//add all nodes in reverse order
             this.add(myStack.pop());
         }
-
-
     }
 
     //Assignment 3a
-    public void addAtFirstSmaller(T t){
+    public void addAtFirstSmaller(T t){//begin from the back and search for the first node with the value lesser than t, insert this "t" behind this node
         ifNull(t);
         ListNode<T> node = tail; //           
 
-        if(isEmpty()){
+        if(isEmpty()){//list empty?, add t
             add(t);
             return;
         }
 
-        for(int i = 0; i < size + 1; i++){
-            if(node.value.compareTo(t) <= -1){
-             add(size - i, t);
+        for(int i = 0; i < size + 1; i++){//search the nodes list
+            if(node.value.compareTo(t) <= -1){//-1 means that we search for a smaller number
+             add(size - i, t);//says what index we will put the add on
              return;
             }
             
-            if(node.previous == null){
+            if(node.previous == null){//if we move to the end (tail) we will put t on index 0
                 add(0, t);
                 return;
             }
