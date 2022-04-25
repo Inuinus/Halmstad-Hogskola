@@ -5,30 +5,24 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\startup_sam3x.s</file>
-            <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o.rsp</file>
-            <file>$PROJ_DIR$\Debug\Obj\asm(2).o.rsp</file>
             <file>$PROJ_DIR$\Debug\List\Lab1_2.map</file>
             <file>$PROJ_DIR$\asm(2).s</file>
             <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\asm(2).o</file>
-            <file>$PROJ_DIR$\Debug\Exe\Lab1_2.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\asm(2).o.rsp</file>
             <file>$TOOLKIT_DIR$\config\linker\Microchip\sam3x8\flash.icf</file>
+            <file>$PROJ_DIR$\Debug\Exe\Lab1_2.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\asm(2).o</file>
+            <file>$PROJ_DIR$\startup_sam3x.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_sam3x.o.rsp</file>
         </outputs>
         <file>
-            <name>$PROJ_DIR$\startup_sam3x.s</name>
+            <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
-                    <name>AARM</name>
-                    <file> 5</file>
+                    <name>ILINK</name>
+                    <file> 0 5</file>
                 </tool>
             </outputs>
-            <inputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 1</file>
-                </tool>
-            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\asm(2).s</name>
@@ -41,7 +35,7 @@
             <inputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 2</file>
+                    <file> 3</file>
                 </tool>
             </inputs>
         </file>
@@ -50,24 +44,30 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 3</file>
+                    <file> 0</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 8 6 5</file>
+                    <file> 4 6 2</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>[ROOT_NODE]</name>
+            <name>$PROJ_DIR$\startup_sam3x.s</name>
             <outputs>
                 <tool>
-                    <name>ILINK</name>
-                    <file> 7 3</file>
+                    <name>AARM</name>
+                    <file> 2</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 8</file>
+                </tool>
+            </inputs>
         </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
