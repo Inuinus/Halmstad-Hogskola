@@ -1,0 +1,6 @@
+# ninja log v5
+0	304	6725975695242457	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_1/Debug/Obj/asm(2).o	7adc3ff603086bc5
+0	28	6725975719349458	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_1/Debug/Obj/startup_sam3x.o	7cbbdc49f93cecc7
+36	337	6725975722479363	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_1/Debug/Exe/Lab2_1.out	4e46aec35a8fa00c
+0	11	6725980655080406	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_1/Debug/Obj/asm(2).o	7adc3ff603086bc5
+18	51	6725980655446379	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_1/Debug/Exe/Lab2_1.out	4e46aec35a8fa00c
