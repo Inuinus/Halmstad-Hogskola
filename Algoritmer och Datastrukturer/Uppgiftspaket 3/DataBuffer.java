@@ -11,6 +11,7 @@ public class DataBuffer<T> implements Iterable<T>{
         if(bufferSize < 1){
             throw new IllegalAccessError("The size of the buffer cannot be less than 1");
         }
+
         this.bufferSize = bufferSize;
         this.back = -1;
         this.front = 0;
@@ -19,12 +20,24 @@ public class DataBuffer<T> implements Iterable<T>{
     }
 
     public void enqueue(T t){
-        back = (back + 1);
+        if(size == bufferSize){
+            throw new IllegalStateException("Buffer is full, u can't add more");
+        }
+        back = (back + 1)%bufferSize;
         a[back] = t;
         size = size + 1;
     }
 
+    public T dequeue(){
+        T element = a[front];
+        front = (front + 1) % bufferSize;
+        size--;
+        return element;
+    }
 
+    public void changeBufferSize(int newBufferSize){
+
+    }
 
     @Override
     public Iterator<T> iterator() {
@@ -34,6 +47,10 @@ public class DataBuffer<T> implements Iterable<T>{
 
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    public int bufferSize(){
+        return bufferSize;
     }
     
     public void printBuffer() {
@@ -55,12 +72,21 @@ public class DataBuffer<T> implements Iterable<T>{
     }
 
     public static void main(String[] args) {
-        DataBuffer<Integer> buffer1 = new DataBuffer<>(5);
+        DataBuffer<Integer> buffer1 = new DataBuffer<>(8);
         buffer1.enqueue(4);
         buffer1.enqueue(7);
         buffer1.enqueue(2);
         buffer1.enqueue(9);
+        buffer1.enqueue(9);
+        buffer1.enqueue(8);
+        buffer1.enqueue(9);
+        buffer1.enqueue(9);
+        buffer1.enqueue(9);
         buffer1.printBuffer();
 
+        buffer1.dequeue();
+        buffer1.enqueue(17);
+        buffer1.printBuffer();
+        System.out.println(buffer1.bufferSize()); 
     }
 }
