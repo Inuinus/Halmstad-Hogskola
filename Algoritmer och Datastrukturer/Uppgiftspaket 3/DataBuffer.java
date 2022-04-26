@@ -38,7 +38,7 @@ public class DataBuffer<T> implements Iterable<T>{
     public void changeBufferSize(int newBufferSize){
         bufferSize = newBufferSize;
         if(newBufferSize < bufferSize){
-
+            
         }
     }
 
@@ -84,10 +84,22 @@ public class DataBuffer<T> implements Iterable<T>{
         buffer1.enqueue(2);
         buffer1.enqueue(9);
         buffer1.enqueue(9);
-        buffer1.printBuffer();
+        buffer1.enqueue(2);
+        buffer1.enqueue(9);
+        buffer1.enqueue(9);
 
         buffer1.dequeue();
-        buffer1.enqueue(17);
+        buffer1.dequeue();
+        buffer1.dequeue();
+        buffer1.dequeue();
+        buffer1.dequeue();
+        buffer1.dequeue();
+        buffer1.dequeue();
+        buffer1.dequeue();
+
+        
+        buffer1.printBuffer();
+        buffer1.enqueue(9);
         buffer1.printBuffer();
         System.out.println(buffer1.bufferSize()); 
 
