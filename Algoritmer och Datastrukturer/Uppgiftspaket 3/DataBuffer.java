@@ -25,7 +25,7 @@ public class DataBuffer<T> implements Iterable<T>{
         }
         back = (back + 1)%bufferSize;
         a[back] = t;
-        size = size + 1;
+        size++;
     }
 
     public T dequeue(){
@@ -36,21 +36,27 @@ public class DataBuffer<T> implements Iterable<T>{
     }
 
     public void changeBufferSize(int newBufferSize){
+        bufferSize = newBufferSize;
+        if(newBufferSize < bufferSize){
 
-    }
-
-    @Override
-    public Iterator<T> iterator() {
-        // TODO Auto-generated method stub
-        return null;
+        }
     }
 
     public boolean isEmpty() {
-        return size == 0;
+        return bufferSize == 0;
+    }
+
+    public int size(){
+        return size;
     }
 
     public int bufferSize(){
         return bufferSize;
+    }
+
+    public Iterator<T> iterator() {
+        // TODO Auto-generated method stub
+        return null;
     }
     
     public void printBuffer() {
@@ -78,15 +84,12 @@ public class DataBuffer<T> implements Iterable<T>{
         buffer1.enqueue(2);
         buffer1.enqueue(9);
         buffer1.enqueue(9);
-        buffer1.enqueue(8);
-        buffer1.enqueue(9);
-        buffer1.enqueue(9);
-        buffer1.enqueue(9);
         buffer1.printBuffer();
 
         buffer1.dequeue();
         buffer1.enqueue(17);
         buffer1.printBuffer();
         System.out.println(buffer1.bufferSize()); 
+
     }
 }
