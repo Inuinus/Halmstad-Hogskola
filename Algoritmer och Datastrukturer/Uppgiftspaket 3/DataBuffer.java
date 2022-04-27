@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class DataBuffer<T> implements Iterable<T>{
@@ -56,6 +57,26 @@ public class DataBuffer<T> implements Iterable<T>{
             return;
         }
         
+        if(newBufferSize < bufferSize){
+            T[] newBuffer_array = (T[]) new Comparable[newBufferSize];
+            int newBuffer_array_index = 0;
+            back = -1;
+            size = 0;
+
+            for(int i = front; i < newBufferSize; i++){
+                newBuffer_array[newBuffer_array_index] = a[i % bufferSize];
+                newBuffer_array++;
+                back++;
+                size++;
+            }
+            front = 0;
+            a = newBuffer_array;
+            return;
+        }
+
+        a = Arrays.copyOf(a, newBufferSize);
+        bufferSize = newBufferSize;
+        return;
     }
 
     public boolean isEmpty() {
