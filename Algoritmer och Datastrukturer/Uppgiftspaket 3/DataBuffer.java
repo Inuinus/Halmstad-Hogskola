@@ -65,7 +65,7 @@ public class DataBuffer<T> implements Iterable<T>{
 
             for(int i = front; i < newBufferSize; i++){
                 newBuffer_array[newBuffer_array_index] = a[i % bufferSize];
-                newBuffer_array++;
+                newBuffer_array_index++;
                 back++;
                 size++;
             }
@@ -80,7 +80,7 @@ public class DataBuffer<T> implements Iterable<T>{
     }
 
     public boolean isEmpty() {
-        return bufferSize == 0;
+        return size == 0;
     }
 
     public int size(){
