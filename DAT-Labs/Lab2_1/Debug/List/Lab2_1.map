@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.20.4.327/W64 for ARM                  25/Apr/2022  15:54:25
+# IAR ELF Linker V9.20.4.327/W64 for ARM                  27/Apr/2022  14:15:56
 # Copyright 2007-2022 IAR Systems AB.
 #
 #    Output file  =
@@ -82,7 +82,7 @@ C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab2_1\Debug\Obj: [1]
 Entry                 Address  Size  Type      Object
 -----                 -------  ----  ----      ------
 __iar_program_start  0x8'0239        Code  Gb  startup_sam3x.o [1]
-main                 0x8'02df        Code  Gb  asm(2).o [1]
+main                 0x8'02c1        Code  Gb  asm(2).o [1]
 
 
 [1] = C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab2_1\Debug\Obj

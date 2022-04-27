@@ -4,13 +4,7 @@
 
 "--fpu=None" 
 
-"-p" 
-
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\CONFIG\debugger\Microchip\ATSAM3X8E.ddf" 
-
 "--semihosting" 
-
-"--device=ATSAM3X8E" 
 
 "--multicore_nr_of_cores=1" 
 

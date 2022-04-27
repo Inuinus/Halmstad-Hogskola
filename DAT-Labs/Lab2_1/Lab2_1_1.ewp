@@ -583,7 +583,7 @@
                 </option>
                 <option>
                     <name>AOutputFile</name>
-                    <state></state>
+                    <state>$FILE_BNAME$.o</state>
                 </option>
                 <option>
                     <name>ALimitErrorsCheck</name>
@@ -748,7 +748,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\linker\Microchip\sam3x8\flash.icf</state>
+                    <state>$TOOLKIT_DIR$\config\linker\Microchip\sam3x8\sram.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -981,7 +981,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>Lab2_1_import_lib.o</state>
+                    <state>Lab2_1_1_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -2110,7 +2110,7 @@
         </settings>
     </configuration>
     <file>
-        <name>$PROJ_DIR$\asm(2).s</name>
+        <name>$PROJ_DIR$\asm.s</name>
     </file>
     <file>
         <name>$PROJ_DIR$\startup_sam3x.s</name>
