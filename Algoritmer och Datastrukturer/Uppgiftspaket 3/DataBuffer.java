@@ -29,17 +29,33 @@ public class DataBuffer<T> implements Iterable<T>{
     }
 
     public T dequeue(){
+        if(isEmpty()){
+            return null;
+        }
+
         T element = a[front];
+
+        if(size == 1){
+            back = -1;
+            front = 0;
+            size--;
+            return element;
+        }
+
         front = (front + 1) % bufferSize;
         size--;
         return element;
     }
 
     public void changeBufferSize(int newBufferSize){
-        bufferSize = newBufferSize;
-        if(newBufferSize < bufferSize){
-            
+        if(bufferSize < 1){
+            throw new IllegalArgumentException("BufferSize cant be less than 1");
         }
+
+        if(bufferSize == newBufferSize){
+            return;
+        }
+        
     }
 
     public boolean isEmpty() {
