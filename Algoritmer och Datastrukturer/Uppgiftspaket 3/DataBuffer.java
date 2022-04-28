@@ -92,8 +92,18 @@ public class DataBuffer<T> implements Iterable<T>{
     }
 
     public Iterator<T> iterator() {
-        // TODO Auto-generated method stub
-        return null;
+        return new Iterator<T>() {
+            int index = 1;
+
+            public boolean hasNext() {
+                return index <= size;
+            }
+
+            public T next() {
+                return a[index++];
+            }
+
+        };
     }
     
     public void printBuffer() {
