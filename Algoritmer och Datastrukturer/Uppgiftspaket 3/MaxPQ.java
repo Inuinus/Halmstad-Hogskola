@@ -12,8 +12,10 @@ public class MaxPQ<T extends Comparable<T>>
                     MaxPQ<T> mpqTemp;
 
                     {
+                        mpqTemp = new MaxPQ<T>(); // Detta glömdes
                         for (int i = 1; i <= size; i++)
                             mpqTemp.insert(a[i]);
+                    }
                     }
 
                     public boolean hasNext() {
