@@ -52,10 +52,11 @@ public class Trader extends Thread
               * 2: Ta de nrPicks största elementen från prioritetskön och skriv 
               * ut dessa i prioritetsordning sist i log.txt. Ni ska inte skriva 
               * över det som finns i filen utan lägga till på slutet.
-              */
+              */ 
 
-             for(int i = 0; i < bufferSize; i++)
-             
+              
+
+              stockPicks = new DataBuffer<StockPick>(nrPicks);
 
              time++;
              

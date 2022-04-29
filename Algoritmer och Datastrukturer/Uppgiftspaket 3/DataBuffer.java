@@ -92,17 +92,21 @@ public class DataBuffer<T> implements Iterable<T>{
     }
 
     public Iterator<T> iterator() {
-        return new Iterator<T>() {
-            int index = 1;
 
+        return new Iterator<T>() {
+
+            int index = front;
+            int count = 0;
             public boolean hasNext() {
-                return index <= size;
+
+                return count < size;
             }
 
             public T next() {
-                return a[index++];
-            }
 
+                count++;
+                return a[index++ % bufferSize];
+            }
         };
     }
     
