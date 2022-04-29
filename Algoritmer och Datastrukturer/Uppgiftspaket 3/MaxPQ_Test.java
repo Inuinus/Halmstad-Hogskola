@@ -34,5 +34,21 @@ public class MaxPQ_Test <T extends Comparable <T>> {
     }
 
 
-    
+    public static void main(String[] cmdLn) {
+
+        Comparable[] array1 = new Comparable[]{12, 7, 6, 10, 8, 20};
+
+        MaxPQ mpq1 = new MaxPQ(array1);
+        
+        // for (Object element : mpq1) {
+        //     System.out.print(" " + element);
+        // }
+
+        // System.out.println();
+        
+        for (int i = 0; i < mpq1.size; i++) {
+            System.out.println("a: " + mpq1.a[i]);
+        }
+
+    }
 }

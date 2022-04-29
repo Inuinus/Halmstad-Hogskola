@@ -12,6 +12,7 @@ public class MaxPQ<T extends Comparable<T>>
                     MaxPQ<T> mpqTemp;
 
                     {
+                        mpqTemp = new MaxPQ<T>();
                         for (int i = 1; i <= size; i++)
                             mpqTemp.insert(a[i]);
                     }
@@ -52,9 +53,10 @@ public class MaxPQ<T extends Comparable<T>>
         size = 0;
     }
 
-    public void maxPQ(T[] a) {
+    public MaxPQ(T[] a) {
         this.a = (T[]) a;
         int n = a.length;
+        size = n;
         T[] new_array = (T[]) new Comparable[n+1];
 
         //the new array
@@ -62,12 +64,14 @@ public class MaxPQ<T extends Comparable<T>>
             new_array[i+1] = a[i];
         }
 
-        a = new_array;
+        System.out.println(Arrays.toString(this.a));
+        this.a = new_array;
 
         //iterates
         for(int i = n/2; i >= 1; i--){
-            sink(i);
+            this.sink(i);
         }
+        System.out.println(Arrays.toString(this.a));
     }
 
     int size() {
@@ -159,29 +163,19 @@ public class MaxPQ<T extends Comparable<T>>
     }
 
     public static void main(String[] cmdLn) {
-        int n = 10;
-        Integer[] a = new Integer[n];
-        Random r = new Random();
+ 
+        Comparable[] array1 = new Comparable[]{12, 7, 6, 10, 8, 20};
 
-        for (int i = 0; i < n; i++)
-            a[i] = r.nextInt(10);
+        MaxPQ mpq1 = new MaxPQ(array1);
+        
+        // for (Object element : mpq1) {
+        //     System.out.print(" " + element);
+        // }
 
-        System.out.println(Arrays.toString(a));
-
-        MaxPQ<Integer> mpq = new MaxPQ<Integer>();
-        for (int i = 0; i < n; i++)
-            mpq.insert(a[i]);
-
-        // for (int i = 0; i < n; i++)
-        // System.out.println(mpq.delMax());
-
-        for (Integer i : mpq.sortedOrder())
-            System.out.println(i);
-
-        /*
-         * for (Integer i : mpq)
-         * System.out.println(i);
-         */
-
+        // System.out.println();
+        
+        for (int i = 0; i < mpq1.size; i++) {
+            System.out.println("a: " + mpq1.a[i]);
+        }
     }
 }
