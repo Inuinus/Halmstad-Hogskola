@@ -54,7 +54,13 @@ public class Trader extends Thread
               * över det som finns i filen utan lägga till på slutet.
               */ 
 
-              
+            //  for(int i = 0; i < nrPicks; i++){
+            //      
+            // }           
+
+              for (StockPick currElement : stockPicks) {
+                  prioKo.insert(currElement);
+              }
 
               stockPicks = new DataBuffer<StockPick>(nrPicks);
 
