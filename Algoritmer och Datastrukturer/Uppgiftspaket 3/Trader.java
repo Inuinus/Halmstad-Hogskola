@@ -58,8 +58,21 @@ public class Trader extends Thread
                   prioKo.insert(currElement);
               }
 
-
               stockPicks = new DataBuffer<StockPick>(nrPicks);
+
+              try{
+                nrPicks = 3;
+                OutputStreamWriter dataOut = new OutputStreamWriter(new FileOutputStream("log.txt", true));
+               
+                for(int i = 0; i < nrPicks; i++){
+                    dataOut.append("\n" + prioKo.delMax().toString());
+                }
+                dataOut.append("\n" + "Finish");
+                dataOut.close();
+               }
+               catch(Exception e){
+                   System.out.println("Something went wrong :(((");
+               }
 
 
 
@@ -69,10 +82,6 @@ public class Trader extends Thread
              System.out.println("Time elapsed: " + time 
              + " seconds.");
          }
-
-         OutputStreamWriter dataOut = 
-         new OutputStreamWriter(new
-         FileOutputStream("log.txt", true));
     }
     
     
