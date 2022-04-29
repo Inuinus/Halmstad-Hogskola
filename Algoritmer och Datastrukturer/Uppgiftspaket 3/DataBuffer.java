@@ -20,7 +20,7 @@ public class DataBuffer<T> implements Iterable<T>{
         this.a = (T[]) new Comparable[bufferSize];
     }
 
-    public void enqueue(T t){
+    public synchronized void enqueue(T t){
         if(size == bufferSize){
             throw new IllegalStateException("Buffer is full, u can't add more");
         }
@@ -29,7 +29,7 @@ public class DataBuffer<T> implements Iterable<T>{
         size++;
     }
 
-    public T dequeue(){
+    public synchronized T dequeue(){
         if(isEmpty()){
             return null;
         }
