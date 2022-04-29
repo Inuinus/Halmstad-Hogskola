@@ -7,15 +7,15 @@ public class Trader extends Thread
 
     int nrPicks; // nr of stock picks for printing to log-file each second
     int endTime; // time to run in seconds
-    MaxPQ prioKo;
+    MaxPQ prioKo; // prioKö, needed for MaxPQ usage
     
     public Trader(DataBuffer<StockPick> stockPicks,
-    int bufferSize, int nrPicks, int endTime)
+    int bufferSize, int nrPicks, int endTime) //Constructor
     {
         this.stockPicks = stockPicks;
         this.nrPicks = nrPicks;
         this.endTime = endTime;
-        this.prioKo = new MaxPQ<>();
+        this.prioKo = new MaxPQ<>(); //Construction of a new MaxPQ variable. (PrioKö)
     }
     
     public void run() 
@@ -52,23 +52,27 @@ public class Trader extends Thread
               * 2: Ta de nrPicks största elementen från prioritetskön och skriv 
               * ut dessa i prioritetsordning sist i log.txt. Ni ska inte skriva 
               * över det som finns i filen utan lägga till på slutet.
-              */ 
-
-            //  for(int i = 0; i < nrPicks; i++){
-            //      
-            // }           
+              */          
 
               for (StockPick currElement : stockPicks) {
                   prioKo.insert(currElement);
               }
 
+
               stockPicks = new DataBuffer<StockPick>(nrPicks);
+
+
+
 
              time++;
              
              System.out.println("Time elapsed: " + time 
              + " seconds.");
          }
+
+         OutputStreamWriter dataOut = 
+         new OutputStreamWriter(new
+         FileOutputStream("log.txt", true));
     }
     
     
