@@ -20,11 +20,9 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
         }
     }
 
-    Node root;
-    int size = 0;
-
     TreeSetCounter(){
-        root = null;
+        Node root;
+        int size = 0;
     }
 
     public void add(T t){
@@ -48,7 +46,6 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
 
     public boolean isEmpty(){
         return false;
-
     }
 
     public int size(){
@@ -61,7 +58,6 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
 
     }
 
-    @Override
     public Iterator<T> iterator() {
         // TODO Auto-generated method stub
         return null;
