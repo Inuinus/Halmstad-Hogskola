@@ -20,18 +20,23 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
         }
     }
 
+    Node root;
+    int size = 0;
+
     TreeSetCounter(){
-        Node root;
-        int size = 0;
+        root = null;
     }
 
     public void add(T t){
-
+        if(root == null){
+            
+        }
         
     }
 
-    public void clear(){
-
+    public void clear(){//removes all elements from the TreeSetCounter
+        size = 0;
+        root = null;
     }
 
     public int getMaxFrequency(){
