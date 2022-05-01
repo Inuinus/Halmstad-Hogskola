@@ -65,7 +65,7 @@ public class Trader extends Thread
                 for(int i = 0; i < nrPicks; i++){
                     dataOut.append("\n" + prioKo.delMax().toString());
                 }
-                dataOut.append("\n" + "Finish");
+                dataOut.append("\n" + "Finish the 3 best");
                 dataOut.close();
                }
                catch(Exception e){
