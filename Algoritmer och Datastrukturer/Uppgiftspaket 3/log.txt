@@ -1,42 +1,42 @@
 Start
 
-Time: 2022/04/29 19:01:55. North America analyzer picks: GME. Confidence: 97. Direction: short. Volume: 15.
-Time: 2022/04/29 19:01:54. Cryptocurrencices analyzer picks: BTC. Confidence: 94. Direction: short. Volume: 6.
-Time: 2022/04/29 19:01:55. Cryptocurrencices analyzer picks: BTC. Confidence: 92. Direction: long. Volume: 59.
+Time: 2022/05/01 14:42:32. Cryptocurrencices analyzer picks: ETH. Confidence: 89. Direction: short. Volume: 62.
+Time: 2022/05/01 14:42:32. North America analyzer picks: AMZN. Confidence: 86. Direction: long. Volume: 60.
+Time: 2022/05/01 14:42:32. North America analyzer picks: CCJ. Confidence: 84. Direction: long. Volume: 71.
 Finish
-Time: 2022/04/29 19:01:55. North America analyzer picks: GOOGL. Confidence: 92. Direction: long. Volume: 35.
-Time: 2022/04/29 19:01:54. North America analyzer picks: CCJ. Confidence: 91. Direction: long. Volume: 91.
-Time: 2022/04/29 19:01:54. Cryptocurrencices analyzer picks: ETH. Confidence: 89. Direction: short. Volume: 71.
+Time: 2022/05/01 14:42:33. Cryptocurrencices analyzer picks: ETH. Confidence: 99. Direction: short. Volume: 99.
+Time: 2022/05/01 14:42:32. North America analyzer picks: GME. Confidence: 97. Direction: short. Volume: 37.
+Time: 2022/05/01 14:42:32. North America analyzer picks: GME. Confidence: 96. Direction: long. Volume: 74.
 Finish
-Time: 2022/04/29 19:01:55. Cryptocurrencices analyzer picks: BTC. Confidence: 89. Direction: short. Volume: 87.
-Time: 2022/04/29 19:01:55. Cryptocurrencices analyzer picks: ETH. Confidence: 87. Direction: short. Volume: 19.
-Time: 2022/04/29 19:01:55. Cryptocurrencices analyzer picks: BTC. Confidence: 84. Direction: short. Volume: 75.
+Time: 2022/05/01 14:42:32. North America analyzer picks: CCJ. Confidence: 93. Direction: short. Volume: 66.
+Time: 2022/05/01 14:42:32. Cryptocurrencices analyzer picks: BTC. Confidence: 92. Direction: short. Volume: 28.
+Time: 2022/05/01 14:42:33. Cryptocurrencices analyzer picks: BTC. Confidence: 92. Direction: short. Volume: 94.
 Finish
-Time: 2022/04/29 19:01:54. North America analyzer picks: MFST. Confidence: 79. Direction: long. Volume: 40.
-Time: 2022/04/29 19:01:55. North America analyzer picks: AAPL. Confidence: 78. Direction: long. Volume: 72.
-Time: 2022/04/29 19:01:55. North America analyzer picks: MFST. Confidence: 75. Direction: long. Volume: 12.
+Time: 2022/05/01 14:42:34. Cryptocurrencices analyzer picks: ETH. Confidence: 95. Direction: short. Volume: 78.
+Time: 2022/05/01 14:42:34. Cryptocurrencices analyzer picks: ETH. Confidence: 92. Direction: long. Volume: 75.
+Time: 2022/05/01 14:42:33. North America analyzer picks: CCJ. Confidence: 91. Direction: short. Volume: 21.
 Finish
-Time: 2022/04/29 19:01:54. Cryptocurrencices analyzer picks: BTC. Confidence: 74. Direction: short. Volume: 6.
-Time: 2022/04/29 19:01:54. Cryptocurrencices analyzer picks: ETH. Confidence: 70. Direction: short. Volume: 92.
-Time: 2022/04/29 19:01:55. North America analyzer picks: TSLA. Confidence: 64. Direction: long. Volume: 36.
+Time: 2022/05/01 14:42:35. Cryptocurrencices analyzer picks: BTC. Confidence: 95. Direction: short. Volume: 22.
+Time: 2022/05/01 14:42:35. Cryptocurrencices analyzer picks: BTC. Confidence: 92. Direction: short. Volume: 86.
+Time: 2022/05/01 14:42:35. North America analyzer picks: GME. Confidence: 90. Direction: short. Volume: 44.
 Finish
-Time: 2022/04/29 19:01:55. North America analyzer picks: AMZN. Confidence: 62. Direction: short. Volume: 92.
-Time: 2022/04/29 19:01:55. Cryptocurrencices analyzer picks: ETH. Confidence: 62. Direction: short. Volume: 20.
-Time: 2022/04/29 19:01:54. Cryptocurrencices analyzer picks: ETH. Confidence: 62. Direction: short. Volume: 26.
+Time: 2022/05/01 14:42:36. Cryptocurrencices analyzer picks: ETH. Confidence: 97. Direction: long. Volume: 32.
+Time: 2022/05/01 14:42:36. Cryptocurrencices analyzer picks: ETH. Confidence: 96. Direction: short. Volume: 65.
+Time: 2022/05/01 14:42:36. Cryptocurrencices analyzer picks: BTC. Confidence: 90. Direction: long. Volume: 33.
 Finish
-Time: 2022/04/29 19:01:55. North America analyzer picks: GOOGL. Confidence: 52. Direction: short. Volume: 95.
-Time: 2022/04/29 19:01:55. North America analyzer picks: UUUU. Confidence: 47. Direction: long. Volume: 18.
-Time: 2022/04/29 19:01:54. North America analyzer picks: CCJ. Confidence: 45. Direction: long. Volume: 46.
+Time: 2022/05/01 14:42:37. North America analyzer picks: AMZN. Confidence: 99. Direction: long. Volume: 31.
+Time: 2022/05/01 14:42:37. North America analyzer picks: CCJ. Confidence: 96. Direction: long. Volume: 82.
+Time: 2022/05/01 14:42:37. North America analyzer picks: MFST. Confidence: 95. Direction: long. Volume: 6.
 Finish
-Time: 2022/04/29 19:01:55. Cryptocurrencices analyzer picks: BTC. Confidence: 42. Direction: long. Volume: 63.
-Time: 2022/04/29 19:01:55. Cryptocurrencices analyzer picks: BTC. Confidence: 42. Direction: short. Volume: 68.
-Time: 2022/04/29 19:01:55. North America analyzer picks: AAPL. Confidence: 38. Direction: short. Volume: 20.
+Time: 2022/05/01 14:42:38. North America analyzer picks: UUUU. Confidence: 98. Direction: short. Volume: 17.
+Time: 2022/05/01 14:42:38. North America analyzer picks: MFST. Confidence: 98. Direction: long. Volume: 42.
+Time: 2022/05/01 14:42:38. North America analyzer picks: UUUU. Confidence: 97. Direction: long. Volume: 13.
 Finish
-Time: 2022/04/29 19:01:54. Cryptocurrencices analyzer picks: BTC. Confidence: 30. Direction: long. Volume: 86.
-Time: 2022/04/29 19:01:55. Cryptocurrencices analyzer picks: BTC. Confidence: 21. Direction: short. Volume: 65.
-Time: 2022/04/29 19:01:54. Cryptocurrencices analyzer picks: ETH. Confidence: 19. Direction: short. Volume: 79.
+Time: 2022/05/01 14:42:39. North America analyzer picks: TSLA. Confidence: 96. Direction: long. Volume: 97.
+Time: 2022/05/01 14:42:39. North America analyzer picks: AMZN. Confidence: 94. Direction: short. Volume: 31.
+Time: 2022/05/01 14:42:39. Cryptocurrencices analyzer picks: ETH. Confidence: 94. Direction: long. Volume: 75.
 Finish
-Time: 2022/04/29 19:01:55. Cryptocurrencices analyzer picks: ETH. Confidence: 19. Direction: short. Volume: 39.
-Time: 2022/04/29 19:01:55. North America analyzer picks: CCJ. Confidence: 19. Direction: long. Volume: 13.
-Time: 2022/04/29 19:01:55. Cryptocurrencices analyzer picks: ETH. Confidence: 18. Direction: long. Volume: 99.
+Time: 2022/05/01 14:42:38. Cryptocurrencices analyzer picks: ETH. Confidence: 94. Direction: long. Volume: 68.
+Time: 2022/05/01 14:42:38. Cryptocurrencices analyzer picks: BTC. Confidence: 93. Direction: short. Volume: 31.
+Time: 2022/05/01 14:42:40. North America analyzer picks: GOOGL. Confidence: 93. Direction: short. Volume: 0.
 Finish

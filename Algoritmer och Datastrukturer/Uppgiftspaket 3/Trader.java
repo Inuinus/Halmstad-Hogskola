@@ -54,13 +54,11 @@ public class Trader extends Thread
               * över det som finns i filen utan lägga till på slutet.
               */          
 
-              for (StockPick currElement : stockPicks) {
-                  prioKo.insert(currElement);
+              for(int i = 0; i < stockPicks.size; i++){ //Overwrite the elements to a empty prioKo
+                  prioKo.insert(stockPicks.dequeue());
               }
 
-              stockPicks = new DataBuffer<StockPick>(nrPicks);
-
-              try{
+              try{//The code for the dataOut(writing the 3 best Stocks to log.txt that already exists)
                 nrPicks = 3;
                 OutputStreamWriter dataOut = new OutputStreamWriter(new FileOutputStream("log.txt", true));
                
@@ -71,11 +69,9 @@ public class Trader extends Thread
                 dataOut.close();
                }
                catch(Exception e){
-                   System.out.println("Something went wrong :(((");
+                   System.out.println("Something went wrong and dident execute");
                }
-
-
-
+               
 
              time++;
              
