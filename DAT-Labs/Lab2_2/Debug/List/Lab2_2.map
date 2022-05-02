@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.20.4.327/W64 for ARM                  02/May/2022  12:12:18
+# IAR ELF Linker V9.20.4.327/W64 for ARM                  02/May/2022  12:23:50
 # Copyright 2007-2022 IAR Systems AB.
 #
 #    Output file  =
@@ -46,16 +46,16 @@ No sections matched the following patterns:
   .intvec  ro code  0x2007'0000   0xf4  startup_sam3x.o [1]
                   - 0x2007'00f4   0xf4
 
-"P1-P2":                         0x1ea
+"P1-P2":                         0x1f0
   .text    ro code  0x2007'00f4  0x1cc  startup_sam3x.o [1]
-  .text    ro code  0x2007'02c0   0x1e  asm.o [1]
-                  - 0x2007'02de  0x1ea
+  .text    ro code  0x2007'02c0   0x24  asm.o [1]
+                  - 0x2007'02e4  0x1f0
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-  0x2007'02de  0x2008'7fff  0x1'7d22
+  0x2007'02e4  0x2008'7fff  0x1'7d1c
 
 
 
@@ -70,13 +70,13 @@ command line/config:
     Total:
 
 C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab2_2\Debug\Obj: [1]
-    asm.o                 30
+    asm.o                 36
     startup_sam3x.o      704
     ------------------------
-    Total:               734
+    Total:               740
 
 ----------------------------
-    Grand Total:         734
+    Grand Total:         740
 
 
 *******************************************************************************
@@ -91,7 +91,7 @@ main                 0x2007'02d1        Code  Gb  asm.o [1]
 
 [1] = C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab2_2\Debug\Obj
 
-  734 bytes of readonly  code memory
+  740 bytes of readonly  code memory
 
 Errors: none
 Warnings: none
