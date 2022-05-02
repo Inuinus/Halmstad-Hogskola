@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.20.4.327/W64 for ARM                  27/Apr/2022  14:28:23
+# IAR ELF Linker V9.20.4.327/W64 for ARM                  02/May/2022  11:51:24
 # Copyright 2007-2022 IAR Systems AB.
 #
 #    Output file  =
@@ -46,16 +46,16 @@ No sections matched the following patterns:
   .intvec  ro code  0x2007'0000   0xf4  startup_sam3x.o [1]
                   - 0x2007'00f4   0xf4
 
-"P1-P2":                         0x1fc
+"P1-P2":                         0x1ea
   .text    ro code  0x2007'00f4  0x1cc  startup_sam3x.o [1]
-  .text    ro code  0x2007'02c0   0x30  asm.o [1]
-                  - 0x2007'02f0  0x1fc
+  .text    ro code  0x2007'02c0   0x1e  asm.o [1]
+                  - 0x2007'02de  0x1ea
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-  0x2007'02f0  0x2008'7fff  0x1'7d10
+  0x2007'02de  0x2008'7fff  0x1'7d22
 
 
 
@@ -70,13 +70,13 @@ command line/config:
     Total:
 
 C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab2_1\Debug\Obj: [1]
-    asm.o                 48
+    asm.o                 30
     startup_sam3x.o      704
     ------------------------
-    Total:               752
+    Total:               734
 
 ----------------------------
-    Grand Total:         752
+    Grand Total:         734
 
 
 *******************************************************************************
@@ -86,12 +86,12 @@ C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab2_1\Debug\Obj: [1]
 Entry                    Address  Size  Type      Object
 -----                    -------  ----  ----      ------
 __iar_program_start  0x2007'0239        Code  Gb  startup_sam3x.o [1]
-main                 0x2007'02c1        Code  Gb  asm.o [1]
+main                 0x2007'02d1        Code  Gb  asm.o [1]
 
 
 [1] = C:\Users\linus\Documents\GitHub\Halmstad-H-gskola\DAT-Labs\Lab2_1\Debug\Obj
 
-  752 bytes of readonly  code memory
+  734 bytes of readonly  code memory
 
 Errors: none
 Warnings: none
