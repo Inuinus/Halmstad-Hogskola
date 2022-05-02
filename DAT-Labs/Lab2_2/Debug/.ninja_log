@@ -1,1 +1,18 @@
 # ninja log v5
+0	26	6731840095723405	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Obj/startup_sam3x.o	a90715b65f1ef160
+0	10	6731843464312644	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Obj/asm.o	e81476e24d917a6b
+14	281	6731843467007174	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Exe/Lab2_2.out	2e6338e9411f571b
+1	12	6731844027567087	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Obj/asm.o	e81476e24d917a6b
+16	44	6731844027873946	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Exe/Lab2_2.out	2e6338e9411f571b
+0	9	6731845051340478	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Obj/asm.o	e81476e24d917a6b
+12	42	6731845051654715	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Exe/Lab2_2.out	2e6338e9411f571b
+0	9	6731846115871547	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Obj/asm.o	e81476e24d917a6b
+11	38	6731846116146084	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Exe/Lab2_2.out	2e6338e9411f571b
+0	11	6731847858020397	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Obj/asm.o	e81476e24d917a6b
+14	44	6731847858334225	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Exe/Lab2_2.out	2e6338e9411f571b
+1	9	6731849618675099	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Obj/asm.o	e81476e24d917a6b
+11	39	6731849618954587	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Exe/Lab2_2.out	2e6338e9411f571b
+0	11	6731859424996381	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Obj/asm.o	e81476e24d917a6b
+15	46	6731859425302272	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Exe/Lab2_2.out	2e6338e9411f571b
+1	10	6731869571537695	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Obj/asm.o	e81476e24d917a6b
+13	45	6731869571801130	C:/Users/linus/Documents/GitHub/Halmstad-H-gskola/DAT-Labs/Lab2_2/Debug/Exe/Lab2_2.out	2e6338e9411f571b
