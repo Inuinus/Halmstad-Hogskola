@@ -44,7 +44,7 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
             root.counter++;
         }
 
-        root.size = storlek(root.left) + storlek(root.right) + 1;
+        root.size = size(root.left) + size(root.right) + 1;
         return root;
     }
 
@@ -54,14 +54,45 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
     }
 
     public int getMaxFrequency(){
-        return 0;
+        return getMaxFrequency(root.counter);
     }
 
-    public Node getMax(){
-        return root;
+    public int getMaxFrequency(int counter){
+        counter = 0;
+        if(root == null){
+            counter = 0;
+            return counter;
+        }
+
+        while(root != null){
+            if(counter > root.counter){
+                root = root.left;
+            }else if(counter < root.counter){
+                counter = root.counter;
+            }else{
+                root = root.right;
+            }
+        }
+        return counter;
     }
 
     public boolean contains(T t){
+        return contains(t, root);
+    }
+
+    public boolean contains(T t, Node root){
+        if(root == null){
+            return false;
+        }
+        while(root != null){
+            if(t.compareTo(root.t) < 0){
+                return contains(t, root.left);
+            }else if(t.compareTo(root.t) > 0){
+                return contains(t, root.right);
+            }else{
+                return true;
+            }
+        }
         return false;
     }
 
@@ -70,29 +101,39 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
     }
 
     public int size(){
-        return storlek(root);
+        return size(root);
     }
 
-    public int storlek(Node root){
+    public int size(Node root){
         if(root == null){
             return 0;
         }else{
-            return 1 + storlek(root.left) + storlek(root.right);
+            return 1 + size(root.left) + size(root.right);
         }
     }
 
     public int counter(T t){
-        return search(root, t);
+        return search(t, root);
     }
 
-    public int search(Node root, T t){
-        if(root == null || root.t == t){
-            return root;
+    public int search(T t, Node root){
+        int counter = 0;
+        if(root == null){
+            counter = 0;
+            return counter;
         }
-        if(t.compareTo(t) < 0){
-            return search(root.left, t);
+        
+        while(root != null){
+            if(t.compareTo(root.t) < 0){
+                return search(t, root.left);
+            }else if(t.compareTo(root.t) > 0){
+                return search(t, root.right);
+            }
+            else{
+                return counter = root.counter;
+            }
         }
-        return search(root.right, t);
+        return counter;
     }
 
     public Iterator<T> iterator() {
@@ -137,10 +178,13 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
         root.add(30);
         root.add(25);
         root.add(15);
-        System.out.println(root.contains(8));
+        System.out.println(root.contains(0));
         System.out.println(root.counter(10));
         System.out.println(root.toString());
+        System.out.println(root.size());
+        System.out.println(root.getMaxFrequency());
         root.clear();
+
 
         
 
