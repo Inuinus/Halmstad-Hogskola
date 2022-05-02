@@ -21,7 +21,6 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
     }
 
     Node root;
-    Node parent = null;
     int size = 0;
 
     TreeSetCounter(){
@@ -29,25 +28,22 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
     }
 
     public void add(T t){
+        root = insert(root, t);
+    }
+
+    public Node insert(Node root, T t){
         if(root == null){
-            new Node(t);
+            return new Node(t);
         }
-
-        while(t != null){
-            parent = root; //Updates the parent to the current node
-            
-            if(t.compareTo(root.t) < 0){
-                root = root.left;
-            }else{
-                root = root.right;
-            }
-        }
-
-        if(t.compareTo(parent.t) < 0){
-            parent.left = new Node(t);
+    
+        if(t.compareTo(root.t) < 0){        //if the value "t" is smaller than the parent node we put the "t" value at the left side(smaller side)
+            root.left = insert(root.left, t);
+        }else if(t.compareTo(root.t) > 0){  //Otherwise we put the value if its greather than 0 on the right side because its bigger than the parent node.
+            root.right = insert(root.right, t);
         }else{
-            parent.right = new Node(t);
+            root.counter++;
         }
+        return root;
     }
 
     public void clear(){//removes all elements from the TreeSetCounter
@@ -58,6 +54,14 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
     public int getMaxFrequency(){
         return 0;
 
+    }
+
+    public Node getMax(){
+        if(root == null){
+            return null;
+        }
+        
+        return root;
     }
 
     public boolean contains(T t){
@@ -113,8 +117,17 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
      public static void main(String[] args) {
         TreeSetCounter root = new TreeSetCounter<>();
         root.add(10);
+        root.add(20);
+        root.add(8);
+        root.add(30);
+        root.add(25);
+        root.add(15);
         System.out.println(root.toString());
+        root.clear();
+
         
+
+        System.out.println(root.toString());
      }  
     
 }
