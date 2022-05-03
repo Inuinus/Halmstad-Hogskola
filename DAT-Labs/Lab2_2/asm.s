@@ -4,10 +4,10 @@
         THUMB
         
 main
-     MOV R0, #0 ; The variable that contains the compare value for #32, also the add counter of #1
-     MOV R1, #0 ; The variable that stores XOR value of R3 and R4.
      LDR R3, =0xAEDFCDEF ;R3, the variable that contains the loaded hexadecimal number
      LDR R4, =0xCEDFACDE ;R4, the variable that contains the second loaded hexadecimal number
+     MOV R0, #0 ; The variable that contains the compare value for #32, also the add counter of #1
+     MOV R1, #0 ; The variable that stores XOR value of R3 and R4.
      BL HamDistReg       ;Brach linked HamDistReg
 STOP B STOP ; infinite walk 
   
