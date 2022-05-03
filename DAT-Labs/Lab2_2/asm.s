@@ -3,14 +3,6 @@
         SECTION .text : CODE (2)
         THUMB
   
-main
-     MOV R0, #0 ; counter
-     MOV R1, #0 ; Compare value to our 32-bit number
-     LDR R3, =0xAEDFCDEF
-     LDR R4, =0xCEDFACDE
-     BL HamDistReg
-STOP B STOP ; infinite walk 
-  
 HamDistReg
      EOR R1, R3, R4
 COUNTER
@@ -23,4 +15,11 @@ COUNTER
      
 FINSIH
      BX LR
+main
+     MOV R0, #0 ; counter
+     MOV R1, #0 ; Compare value to our 32-bit number
+     LDR R3, =0xAEDFCDEF
+     LDR R4, =0xCEDFACDE
+     BL HamDistReg
+STOP B STOP ; infinite walk 
      END
