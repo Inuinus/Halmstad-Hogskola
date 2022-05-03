@@ -1,5 +1,55 @@
 <?xml version="1.0"?>
 <settings>
+    <Stack>
+        <FillEnabled>0</FillEnabled>
+        <OverflowWarningsEnabled>1</OverflowWarningsEnabled>
+        <WarningThreshold>90</WarningThreshold>
+        <SpWarningsEnabled>1</SpWarningsEnabled>
+        <WarnLogOnly>1</WarnLogOnly>
+        <UseTrigger>1</UseTrigger>
+        <TriggerName>main</TriggerName>
+        <LimitSize>0</LimitSize>
+        <ByteLimit>50</ByteLimit>
+    </Stack>
+    <Trace1>
+        <Enabled>0</Enabled>
+        <ShowSource>1</ShowSource>
+    </Trace1>
+    <DebugChecksum>
+        <Checksum>2341699723</Checksum>
+    </DebugChecksum>
+    <Disassembly>
+        <MixedMode>1</MixedMode>
+        <InstrCount>0</InstrCount>
+    </Disassembly>
+    <Exceptions>
+        <StopOnUncaught>_ 0</StopOnUncaught>
+        <StopOnThrow>_ 0</StopOnThrow>
+    </Exceptions>
+    <CallStack>
+        <ShowArgs>0</ShowArgs>
+    </CallStack>
+    <DriverProfiling>
+        <Enabled>0</Enabled>
+        <Mode>1</Mode>
+        <Graph>0</Graph>
+        <Symbiont>0</Symbiont>
+    </DriverProfiling>
+    <CallStackLog>
+        <Enabled>0</Enabled>
+    </CallStackLog>
+    <CallStackStripe>
+        <ShowTiming>1</ShowTiming>
+    </CallStackStripe>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
+        <Category2>_ 2</Category2>
+    </LogFile>
     <InterruptLog>
         <GraphEnabled>0</GraphEnabled>
         <LogEnabled>0</LogEnabled>
@@ -15,17 +65,6 @@
         <SumEnabled>0</SumEnabled>
         <ShowTimeSum>1</ShowTimeSum>
     </DataLog>
-    <Stack>
-        <FillEnabled>0</FillEnabled>
-        <OverflowWarningsEnabled>1</OverflowWarningsEnabled>
-        <WarningThreshold>90</WarningThreshold>
-        <SpWarningsEnabled>1</SpWarningsEnabled>
-        <WarnLogOnly>1</WarnLogOnly>
-        <UseTrigger>1</UseTrigger>
-        <TriggerName>main</TriggerName>
-        <LimitSize>0</LimitSize>
-        <ByteLimit>50</ByteLimit>
-    </Stack>
     <DisassembleMode>
         <mode>0</mode>
     </DisassembleMode>
@@ -42,10 +81,6 @@
         <TypeViol>0</TypeViol>
         <Stop>1</Stop>
     </MemConfig>
-    <Trace1>
-        <Enabled>0</Enabled>
-        <ShowSource>1</ShowSource>
-    </Trace1>
     <Aliases>
         <Count>0</Count>
         <SuppressDialog>0</SuppressDialog>

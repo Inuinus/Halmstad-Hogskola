@@ -17,7 +17,7 @@ FIBONACCI_DO
         POP {PC} 
 
 main
-       MOV R0, #6 ; n
+       MOV R0, #4 ; n
        MOV R1, #0 ; f
        MOV R2, #1 ; g
        BL FIBONACCI
