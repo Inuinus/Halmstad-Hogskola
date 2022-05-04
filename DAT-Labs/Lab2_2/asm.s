@@ -15,7 +15,7 @@ HamDistReg
 LOOP
      CMP R1, #0 ;Comparing R1 to #0(Bits), if the variable R1 contains #0 Branch Equals which means we go to FINISH
      BEQ FINSIH  ;Explaining the BEQ FINISH function above ^
-     LSRS R1, #1 ;Left Shift Right(S)-Flagged numbers, Shifts the through the variable R1 with #1 each time.
+     LSRS R1, #1 ;Logical Shift Right(S)-Flagged numbers, Shifts the through the variable R1 with #1 each time.
      ADC R2, #0  ;Adds the carry flag to the variable R2
      B LOOP
 FINSIH
