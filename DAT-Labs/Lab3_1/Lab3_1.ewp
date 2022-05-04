@@ -2112,4 +2112,7 @@
     <file>
         <name>$PROJ_DIR$\asm.s</name>
     </file>
+    <file>
+        <name>$PROJ_DIR$\startup_sam3x.s</name>
+    </file>
 </project>

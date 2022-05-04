@@ -50,7 +50,7 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 5 2</file>
+                    <file> 2 5</file>
                 </tool>
             </outputs>
         </file>

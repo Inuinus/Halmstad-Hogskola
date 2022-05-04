@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>5</fileVersion>
-    <fileChecksum>464213261</fileChecksum>
+    <fileChecksum>3991319701</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
             <file>$PROJ_DIR$\asm.s</file>
+            <file>$PROJ_DIR$\startup_sam3x.s</file>
         </outputs>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
