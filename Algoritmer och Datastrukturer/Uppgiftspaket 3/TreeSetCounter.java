@@ -1,4 +1,5 @@
 import java.util.Iterator;
+import java.util.Stack;
 
 public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
 
@@ -80,15 +81,15 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
         return contains(t, root);
     }
 
-    public boolean contains(T t, Node root){
+    public boolean contains(T t, Node node){
         if(root == null){
             return false;
         }
-        while(root != null){
-            if(t.compareTo(root.t) < 0){
-                return contains(t, root.left);
+        while(node != null){
+            if(t.compareTo(node.t) < 0){
+                return contains(t, node.left);
             }else if(t.compareTo(root.t) > 0){
-                return contains(t, root.right);
+                return contains(t, node.right);
             }else{
                 return true;
             }
@@ -104,11 +105,11 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
         return size(root);
     }
 
-    public int size(Node root){
-        if(root == null){
+    public int size(Node node){
+        if(node == null){
             return 0;
         }else{
-            return 1 + size(root.left) + size(root.right);
+            return 1 + size(node.left) + size(node.right);
         }
     }
 
@@ -116,40 +117,60 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
         return search(t, root);
     }
 
-    public int search(T t, Node root){
+    public int search(T t, Node node){
         int counter = 0;
-        if(root == null){
+        if(node == null){
             counter = 0;
             return counter;
         }
         
-        while(root != null){
-            if(t.compareTo(root.t) < 0){
-                return search(t, root.left);
-            }else if(t.compareTo(root.t) > 0){
-                return search(t, root.right);
+        while(node != null){
+            if(t.compareTo(node.t) < 0){
+                return search(t, node.left);
+            }else if(t.compareTo(node.t) > 0){
+                return search(t, node.right);
             }
             else{
-                return counter = root.counter;
+                return counter = node.counter;
             }
         }
         return counter;
     }
 
-    public Iterator<T> iterator() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-
-
-
+        public Iterator iterator() {
+            return new BSTIterator();
+        }
+    
+        public class BSTIterator implements Iterator<T> {
+            Stack<Node> stack = new Stack<>();
+    
+            BSTIterator() {
+                pushLeft(root);
+            }
+    
+            public boolean hasNext() {
+                return !stack.isEmpty();
+            }
+    
+            public T next() {
+                Node node = stack.pop();
+                pushLeft(node.right);
+                return (T) node.t;
+            }
+    
+            public void pushLeft(Node node) {
+                while(node != null) {
+                    stack.push(node);
+                    node = node.left;
+                }
+            }
+        }
 
     public String toString(){
         return "[" + toString(root) + "]";
      }
  
-     protected String toString(Node node){
+    protected String toString(Node node){
          if(node == null){
              return "";
          }
@@ -171,24 +192,16 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
      public static void main(String[] args) {
         TreeSetCounter root = new TreeSetCounter<>();
         root.add(20);
-        root.add(10);
-        root.add(10);
-        root.add(10);
-        root.add(8);
-        root.add(30);
-        root.add(25);
-        root.add(15);
-        System.out.println(root.contains(0));
-        System.out.println(root.counter(10));
-        System.out.println(root.toString());
-        System.out.println(root.size());
-        System.out.println(root.getMaxFrequency());
-        root.clear();
+        root.add(1);
+        root.add(2);
+        root.add(3);
 
-
+        root.add(4);
+        root.add(4);
+        root.add(4);
+        root.add(4);
         
-
-        System.out.println(root.toString());
+        System.out.println(root.getMaxFrequency());
      }  
     
 }
