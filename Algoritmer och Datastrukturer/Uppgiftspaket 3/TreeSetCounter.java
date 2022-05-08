@@ -200,6 +200,8 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
         root.add(4);
         root.add(4);
         root.add(4);
+
+        System.out.println(root.counter(4));
         
         System.out.println(root.getMaxFrequency());
      }  
