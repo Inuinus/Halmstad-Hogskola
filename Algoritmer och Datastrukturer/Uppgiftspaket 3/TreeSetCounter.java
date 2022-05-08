@@ -61,10 +61,10 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
     }
 
     private void getMax(Node root){
-        if (root == null) {
+        if (root == null) {             //if empty return;
             return;
         }
-        getMax(root.left);
+        getMax(root.left);              //using the method on itself to get root.left, compare root.counter to maxFreq and if its greater than maxFreq becomes root.counter.
         if (root.counter > maxFreq) {
             maxFreq = root.counter;
         }
@@ -80,10 +80,10 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
         if(root == null){
             return false;
         }
-        while(node != null){
-            if(t.compareTo(node.t) < 0){
+        while(node != null){                        //continues til we reach null, if "t" compareTo the nodes "t" value is lesser than 0 we return the value on hte left
+            if(t.compareTo(node.t) < 0){            //and as we continue we continue until we either find a statement that is the same as t or else we get false.
                 return contains(t, node.left);
-            }else if(t.compareTo(root.t) > 0){
+            }else if(t.compareTo(node.t) > 0){
                 return contains(t, node.right);
             }else{
                 return true;
@@ -104,7 +104,7 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
         if(node == null){
             return 0;
         }else{
-            return 1 + size(node.left) + size(node.right);
+            return 1 + size(node.left) + size(node.right);  //adds every node on the left and the nodes on the right + 1;
         }
     }
 
@@ -160,27 +160,4 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
                 }
             }
         }
-
-    public String toString(){
-        return "[" + toString(root) + "]";
-     }
- 
-    protected String toString(Node node){
-         if(node == null){
-             return "";
-         }
-         else{
-             String s = "";
-             s += node.t + ", ";
- 
-             if(node.left != null){
-                 s += "left " + toString(node.left);
-             }
-             if(node.right != null){
-                 s += "right " + toString(node.right);
-             }
- 
-             return s;
-         }
-     }
 }
