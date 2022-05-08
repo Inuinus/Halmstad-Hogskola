@@ -79,6 +79,10 @@ public class DataBuffer<T> implements Iterable<T>{
         return;
     }
 
+    public boolean isFull(){
+        return size == bufferSize;
+    }
+
     public boolean isEmpty() {
         return size == 0;
     }
@@ -108,51 +112,5 @@ public class DataBuffer<T> implements Iterable<T>{
                 return a[index++ % bufferSize];
             }
         };
-    }
-    
-    public void printBuffer() {
-        // custom class
-
-        String s = "(";
-        for (T t : a) {
-            s += t + ", ";
-        }
-
-        if (!isEmpty())
-            s = s.substring(0, s.length() - 2);
-        s += ")";
-        System.out.println(s);
-        System.out.println("back: " + this.back);
-        System.out.println("front: " + this.front);
-        System.out.println("size: " + this.size);
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        DataBuffer<Integer> buffer1 = new DataBuffer<>(8);
-        buffer1.enqueue(4);
-        buffer1.enqueue(7);
-        buffer1.enqueue(2);
-        buffer1.enqueue(9);
-        buffer1.enqueue(9);
-        buffer1.enqueue(2);
-        buffer1.enqueue(9);
-        buffer1.enqueue(9);
-
-        buffer1.dequeue();
-        buffer1.dequeue();
-        buffer1.dequeue();
-        buffer1.dequeue();
-        buffer1.dequeue();
-        buffer1.dequeue();
-        buffer1.dequeue();
-        buffer1.dequeue();
-
-        
-        buffer1.printBuffer();
-        buffer1.enqueue(9);
-        buffer1.printBuffer();
-        System.out.println(buffer1.bufferSize()); 
-
     }
 }

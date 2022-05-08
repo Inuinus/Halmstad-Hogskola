@@ -59,7 +59,6 @@ public class Trader extends Thread
               }
 
               try{//The code for the dataOut(writing the 3 best Stocks to log.txt that already exists)
-                nrPicks = 3;
                 OutputStreamWriter dataOut = new OutputStreamWriter(new FileOutputStream("log.txt", true));
                
                 for(int i = 0; i < nrPicks; i++){

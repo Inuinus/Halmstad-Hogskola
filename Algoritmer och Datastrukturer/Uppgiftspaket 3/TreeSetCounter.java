@@ -23,6 +23,7 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
 
     Node root;
     int size = 0;
+    int maxFreq;
 
     TreeSetCounter(){
         root = null;
@@ -55,27 +56,21 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
     }
 
     public int getMaxFrequency(){
-        return getMaxFrequency(root.counter);
+        getMax(root);
+        return maxFreq;
     }
 
-    public int getMaxFrequency(int counter){
-        counter = 0;
-        if(root == null){
-            counter = 0;
-            return counter;
+    private void getMax(Node root){
+        if (root == null) {
+            return;
         }
-
-        while(root != null){
-            if(counter > root.counter){
-                root = root.left;
-            }else if(counter < root.counter){
-                counter = root.counter;
-            }else{
-                root = root.right;
-            }
+        getMax(root.left);
+        if (root.counter > maxFreq) {
+            maxFreq = root.counter;
         }
-        return counter;
-    }
+        getMax(root.right);
+        return;
+    } 
 
     public boolean contains(T t){
         return contains(t, root);
@@ -137,7 +132,7 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
         return counter;
     }
 
-        public Iterator iterator() {
+        public Iterator<T> iterator() {
             return new BSTIterator();
         }
     
@@ -188,22 +183,4 @@ public class TreeSetCounter<T extends Comparable<T>> implements Iterable<T>{
              return s;
          }
      }
-
-     public static void main(String[] args) {
-        TreeSetCounter root = new TreeSetCounter<>();
-        root.add(20);
-        root.add(1);
-        root.add(2);
-        root.add(3);
-
-        root.add(4);
-        root.add(4);
-        root.add(4);
-        root.add(4);
-
-        System.out.println(root.counter(4));
-        
-        System.out.println(root.getMaxFrequency());
-     }  
-    
 }
