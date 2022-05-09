@@ -1,5 +1,9 @@
 public class HashElement<Key> implements Comparable<HashElement<Key>>{
+    
+    
+    public HashElement(Key key){
 
+    }
 
 
 
