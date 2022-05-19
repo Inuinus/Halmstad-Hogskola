@@ -8,8 +8,8 @@ public class LinearProbingHashSet<Key>{
 
     LinearProbingHashSet(int m){
         keys = new HashElement[m];
-        m = m;
-        n = 0;
+        this.m = m;
+        this.n = 0;
     }
 
     LinearProbingHashSet(){
@@ -26,7 +26,7 @@ public class LinearProbingHashSet<Key>{
     }
 
     public void insert(Key key){
-        checkLoadFactor();
+        watchLoadFactor();
         noResize(key, 1);
         return;
     }
@@ -42,9 +42,11 @@ public class LinearProbingHashSet<Key>{
         return false;
     }
 
-    public void decrease(Key key){
+    public void decrease(Key key)
+    {
         int index = hash(key);
-        while (keys[index] != null) {
+        while (keys[index] != null) 
+        {
             if (keys[index].key.equals(key)) {
                 keys[index].decrement();
                 if (keys[index].counter == 0) {
@@ -53,11 +55,12 @@ public class LinearProbingHashSet<Key>{
             }
             index = updateIndex(index);
         }
-        checkLoadFactor();
+        watchLoadFactor();
         return;
     }
 
-    public void delete(Key key) {
+    public void delete(Key key) 
+    {
 
         int index = hash(key);
         // finds the targeted key
@@ -71,7 +74,7 @@ public class LinearProbingHashSet<Key>{
             }
             index = updateIndex(index);
         }
-        checkLoadFactor();
+        watchLoadFactor();
         return;
     }
 
@@ -93,7 +96,8 @@ public class LinearProbingHashSet<Key>{
         int index = hash(key);
 
         while(keys[index] != null){
-            if (keys[index].key.equals(key)) {
+            if (keys[index].key.equals(key)) 
+            {
                 keys[index] = new HashElement<Key>(key, keys[index].getFrequencey());
                 keys[index].increment();
                 return;
@@ -111,7 +115,8 @@ public class LinearProbingHashSet<Key>{
         return(double) n/m;
     }
 
-    public void checkLoadFactor() {
+    public void watchLoadFactor() 
+    {
         double loadfactor = loadFactor();
 
         if (loadfactor >= 0.5) {
@@ -121,12 +126,14 @@ public class LinearProbingHashSet<Key>{
         }
     }
 
-    public Iterable<Key> keys() {
+    public Iterable<Key> keys() 
+    {
         LinkedList<Key> list = new LinkedList<Key>();
 
-        for (int i = 0; i < m; i++) {
-            if (a[i] != null)
-                list.add(a[i].getKey());
+        for (int i = 0; i < m; i++) 
+        {
+            if (keys[i] != null)
+                list.add(keys[i].getKey());
         }
 
         return list;
