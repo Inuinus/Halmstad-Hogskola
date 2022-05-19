@@ -41,7 +41,7 @@ public class GraphMain {//Creating the class GraphMain(The Graph StdDraw thingy)
             int iY = Integer.parseInt(y);
             int iR = Integer.parseInt(r);
 
-            StdDraw.circle(iX, iY, iR);
+            StdDraw.circle(iX, iY, iR);//the circle drawing and adding
             Graph circleNode = new Graph(iX, iY, iR, iNode);
             Graph.nodeArray.add(circleNode);
         }
