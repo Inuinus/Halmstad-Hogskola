@@ -95,7 +95,7 @@ public class Graph {
         for (int i = 1; i < network.size(); i++) {//For loop for the network.size
             DFS(other);
 
-            dx = network.get(i).iX - other.iX;
+            dx = network.get(i).iX - other.iX;//pythagorean theorem
             dy = network.get(i).iY - other.iY;
 
             curriD = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
