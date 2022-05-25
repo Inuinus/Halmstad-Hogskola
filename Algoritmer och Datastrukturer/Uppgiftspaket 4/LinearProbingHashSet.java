@@ -30,7 +30,7 @@ public class LinearProbingHashSet<Key>{
         noResize(key, 1);//uses the noResize method where we insert value key with the counter value 1
         return;
     }
-
+  
     public boolean contains(Key key){//while the keys index isnt null
         int index = hash(key);
         while(keys[index] != null){
