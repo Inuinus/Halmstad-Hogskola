@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class LinearProbingHashSet<Key>{
@@ -130,16 +133,33 @@ public class LinearProbingHashSet<Key>{
         return;
     }
 
-    public Iterable<Key> keys() 
-    {
-        LinkedList<Key> list = new LinkedList<Key>();
-
-        for (int i = 0; i < m; i++) 
-        {
-            if (a[i] != null)
-                list.add(a[i].getKey());
+    public Iterable<Key> keys() {
+        ArrayList<Key> keysList = new ArrayList<Key>();
+        ArrayList<Integer> counterList = new ArrayList<Integer>();
+        for (int i = 0; i < m; i++) {       //Add the keys in a array and the value counter to another one
+              if (a[i] != null) {
+                  keysList.add((Key) a[i].getKey());
+                  counterList.add(a[i].counter);
+              }
+          }
+  
+        for(int j = 1; j <keysList.size(); j++){
+            Key CK = keysList.get(j);                    // j = 1 gives the second element in the array
+            int CC = counterList.get(j);
+            int k = j - 1;                            //setts k lesser than j, because i always is lesser than j
+  
+            while(k >= 0 && counterList.get(k) > CC){       //as long as k is greater or equal to 0 and CC is greater than one
+                keysList.set(k + 1, keysList.get(k));
+                counterList.set(k + 1, counterList.get(k));
+                k--;
+  
+            }
+            keysList.set(k + 1, CK);
+            counterList.set(k + 1, CC);
         }
-
-        return list;
-    }
+        Collections.reverse(keysList);        //Flips the list so that it prints the most to the least "förekommande"
+        Collections.reverse(counterList);
+  
+        return () -> Arrays.stream((Key[])keysList.toArray()).iterator();
+      }
 }
