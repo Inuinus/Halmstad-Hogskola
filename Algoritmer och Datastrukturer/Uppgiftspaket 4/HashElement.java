@@ -4,12 +4,15 @@ public class HashElement<Key> implements Comparable<HashElement<Key>>{
     int counter;
 
     public HashElement(Key key, int counter){
+        checkIfNull(key);
+        checkIfNegative(counter);
         this.key = key;
         this.counter = counter;
     }
 
     public HashElement(Key key){
         this(key, 1);
+        checkIfNull(key);
     }
 
     public void increment(){
@@ -33,9 +36,27 @@ public class HashElement<Key> implements Comparable<HashElement<Key>>{
         this.key = key;
     }
 
-    public int compareTo(HashElement that) {
-        int compare = Integer.compare(this.counter, that.counter);
-        return compare;
+    public int compareTo(HashElement<Key> that) {
+        if (this.counter > that.counter) {
+            return 1;
+        }
+        if (this.counter < that.counter) {
+            return -1;
+        }
+        return 0;
     }
 
+    //Custom method to check if null;
+    public void checkIfNull(Object value){
+        if(value == null){
+            throw new NullPointerException("Null is not allowed");
+        }
+    }
+
+    //Custom method to check if negative values;
+    public void checkIfNegative(int value){
+        if(value < 0){
+            throw new IllegalArgumentException("Negative values is not allowed");
+        }
+    }
 }
